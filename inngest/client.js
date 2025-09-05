@@ -1,3 +1,4 @@
+// app/inngest/client.js
 import { Inngest } from "inngest";
 
 // Create a client to send and receive events

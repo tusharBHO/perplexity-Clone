@@ -1,0 +1,504 @@
+[
+    {
+        "title": "Breaking News, Latest News and Videos | CNN",
+        "url": "https://www.cnn.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "View the <strong>latest</strong> <strong>news</strong> and breaking <strong>news</strong> today for U.S., world, weather, entertainment, politics and health at CNN.com.",
+        "profile": {
+            "name": "CNN",
+            "url": "https://www.cnn.com/",
+            "long_name": "Cable News Network",
+            "img": "https://imgs.search.brave.com/tV1joo3SHuITYemc5OsCps2_N9Toz6zArm5dNdbSoMs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWE3MWZjOTZk/NGRhM2RmZDQzMjZh/NjE3OGQ3NzQ3MDI5/NDJiOGI2ZDdkZDFj/ODI3N2MzYWU3OGU4/YzQ3YTNkNC93d3cu/Y25uLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "cnn.com",
+            "hostname": "www.cnn.com",
+            "favicon": "https://imgs.search.brave.com/tV1joo3SHuITYemc5OsCps2_N9Toz6zArm5dNdbSoMs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWE3MWZjOTZk/NGRhM2RmZDQzMjZh/NjE3OGQ3NzQ3MDI5/NDJiOGI2ZDdkZDFj/ODI3N2MzYWU3OGU4/YzQ3YTNkNC93d3cu/Y25uLmNvbS8",
+            "path": ""
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/PDPGPKCQfwpmqJV4dO9s7dYjEFBHM9cvSYf1EY1_IaY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5jbm4uY29tL2Fw/aS92MS9pbWFnZXMv/Y25uL2Nubi1wbGFj/ZWhvbGRlci1pbWFn/ZS5qcGVn",
+            "original": "https://media.cnn.com/api/v1/images/cnn/cnn-placeholder-image.jpeg",
+            "logo": false
+        }
+    },
+    {
+        "title": "Reuters World News | Latest Top Stories | Reuters",
+        "url": "https://www.reuters.com/world/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Reuters.com is your online source for the <strong>latest</strong> world <strong>news</strong> stories and current events, ensuring our readers up to date with any breaking <strong>news</strong> developments",
+        "profile": {
+            "name": "Reuters",
+            "url": "https://www.reuters.com/world/",
+            "long_name": "reuters.com",
+            "img": "https://imgs.search.brave.com/g-LRPAPxrx_Eqo7F4IKC-Guqa4ONApD9n_VKZlqfqWo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzE0MWM3N2Ji/ZjQ3ZDhmYzI3NjMz/ODNjYTRiMGI4MjM4/OTExMzRkM2E1ODI4/MjI4YzA0ZWQ0OTRk/YWY5YTQwMy93d3cu/cmV1dGVycy5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "reuters.com",
+            "hostname": "www.reuters.com",
+            "favicon": "https://imgs.search.brave.com/g-LRPAPxrx_Eqo7F4IKC-Guqa4ONApD9n_VKZlqfqWo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzE0MWM3N2Ji/ZjQ3ZDhmYzI3NjMz/ODNjYTRiMGI4MjM4/OTExMzRkM2E1ODI4/MjI4YzA0ZWQ0OTRk/YWY5YTQwMy93d3cu/cmV1dGVycy5jb20v",
+            "path": "› world"
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/g6kSsqGsXudG3xtV1QoZPd0rH2l-2sQmb0lrF360_Nk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmV1dGVycy5jb20v/cGYvcmVzb3VyY2Vz/L2ltYWdlcy9yZXV0/ZXJzL3JldXRlcnMt/ZGVmYXVsdC53ZWJw/P2Q9MzEx",
+            "original": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=311",
+            "logo": false
+        }
+    },
+    {
+        "title": "Fox News - Breaking News Updates | Latest News Headlines | Photos & News Videos",
+        "url": "https://www.foxnews.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Breaking <strong>News</strong>, <strong>Latest</strong> <strong>News</strong> and Current <strong>News</strong> from FOXNews.com. Breaking <strong>news</strong> and video. <strong>Latest</strong> Current <strong>News</strong>: U.S., World, Entertainment, Health, Business, Technology, Politics, Sports",
+        "page_age": "2020-09-09T17:30:06",
+        "profile": {
+            "name": "Fox News",
+            "url": "https://www.foxnews.com/",
+            "long_name": "foxnews.com",
+            "img": "https://imgs.search.brave.com/8Y6YYaSHf4PweCQwcB2IRvUWPCEsdNoek5FtyWqRRW4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGIyN2Q2NTE4/NGRmOTVmZGNmMzEy/OWJjY2MwNzkzYzg0/YWNhOGFmY2UxYTQ1/NmZiM2JkYzcxMjFh/MDFmNDBkYy93d3cu/Zm94bmV3cy5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "video",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "foxnews.com",
+            "hostname": "www.foxnews.com",
+            "favicon": "https://imgs.search.brave.com/8Y6YYaSHf4PweCQwcB2IRvUWPCEsdNoek5FtyWqRRW4/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGIyN2Q2NTE4/NGRmOTVmZGNmMzEy/OWJjY2MwNzkzYzg0/YWNhOGFmY2UxYTQ1/NmZiM2JkYzcxMjFh/MDFmNDBkYy93d3cu/Zm94bmV3cy5jb20v",
+            "path": ""
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/gRF3X05SO20y7RaqbPBarN5PDUlos3uCdvDHyx6hsCs/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuZm94bmV3cy5j/b20vc3RhdGljL29y/aW9uL3N0eWxlcy9p/bWcvZm94LW5ld3Mv/b2cvb2ctZm94LW5l/d3MucG5n",
+            "original": "https://static.foxnews.com/static/orion/styles/img/fox-news/og/og-fox-news.png",
+            "logo": false
+        },
+        "age": "September 9, 2020"
+    },
+    {
+        "title": "Yahoo News: Latest and Breaking News, Headlines, Live Updates, and More",
+        "url": "https://news.yahoo.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "The <strong>latest</strong> <strong>news</strong> and headlines from Yahoo <strong>News</strong>. Get breaking <strong>news</strong> stories and in-depth coverage with videos and photos.",
+        "profile": {
+            "name": "Yahoo!",
+            "url": "https://news.yahoo.com/",
+            "long_name": "news.yahoo.com",
+            "img": "https://imgs.search.brave.com/86IULWwVZuGkOHVcCNh9BRX9z4EF8i0D2QsD9lwfKmc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjhhNzMxMTdi/MmQ2NzA3YWFlNTc5/ZmM4NWY4MGMwYzg3/ZWVkYTk5Yzk5YmEy/ZWUxNDU4NzdlZGY0/ZDQ4OTc0My9uZXdz/LnlhaG9vLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "news.yahoo.com",
+            "hostname": "news.yahoo.com",
+            "favicon": "https://imgs.search.brave.com/86IULWwVZuGkOHVcCNh9BRX9z4EF8i0D2QsD9lwfKmc/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYjhhNzMxMTdi/MmQ2NzA3YWFlNTc5/ZmM4NWY4MGMwYzg3/ZWVkYTk5Yzk5YmEy/ZWUxNDU4NzdlZGY0/ZDQ4OTc0My9uZXdz/LnlhaG9vLmNvbS8",
+            "path": ""
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/S4HWTULq4j6LU2vbNqxnRyYI8jOJQzRzBcZLmsDblUI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zLnlp/bWcuY29tL2N2L2Fw/aXYyL3NvY2lhbC9p/bWFnZXMveWFob29f/ZGVmYXVsdF9sb2dv/LnBuZw",
+            "original": "https://s.yimg.com/cv/apiv2/social/images/yahoo_default_logo.png",
+            "logo": true
+        }
+    },
+    {
+        "title": "Associated Press News: Breaking News, Latest Headlines and Videos | AP News",
+        "url": "https://apnews.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Read the <strong>latest</strong> headlines, breaking <strong>news</strong>, and videos at APNews.com, the definitive source for independent journalism from every corner of the globe.",
+        "profile": {
+            "name": "AP News",
+            "url": "https://apnews.com/",
+            "long_name": "apnews.com",
+            "img": "https://imgs.search.brave.com/-_32qKbk4nzvzQ3RP6w9el0V0iswWgQP6EG3HIKvQ2s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWJlOGE2ODEz/ZDcxYzRjZDBjMzMw/OTZiMWM3ZDUwNjJk/ZTMyZDY3N2U5NTg4/ZDZhNDk3NzFiZjdh/OGQ0YTFmNi9hcG5l/d3MuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "apnews.com",
+            "hostname": "apnews.com",
+            "favicon": "https://imgs.search.brave.com/-_32qKbk4nzvzQ3RP6w9el0V0iswWgQP6EG3HIKvQ2s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWJlOGE2ODEz/ZDcxYzRjZDBjMzMw/OTZiMWM3ZDUwNjJk/ZTMyZDY3N2U5NTg4/ZDZhNDk3NzFiZjdh/OGQ0YTFmNi9hcG5l/d3MuY29tLw",
+            "path": ""
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/Eg_ksIiEcLvn7WSCtfZAEH4hutpIzgXqk8xpKZLOWWk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kaW1z/LmFwbmV3cy5jb20v/ZGltczQvZGVmYXVs/dC9kY2FjMWE0LzIx/NDc0ODM2NDcvc3Ry/aXAvdHJ1ZS9jcm9w/LzcwMHgzOTQrMCsy/OC9yZXNpemUvMTQ0/MHg4MTAhL3F1YWxp/dHkvOTAvP3VybD1o/dHRwcyUzQSUyRiUy/RmFzc2V0cy5hcG5l/d3MuY29tJTJGOTAl/MkYyOSUyRjRlM2Mx/Y2M3NDQ2MDg5YTkx/MDFhN2JkZmY0Yzgl/MkZkZWZhdWx0c2hh/cmVpbWFnZS1jb3B5/LnBuZw",
+            "original": "https://dims.apnews.com/dims4/default/dcac1a4/2147483647/strip/true/crop/700x394+0+28/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F90%2F29%2F4e3c1cc7446089a9101a7bdff4c8%2Fdefaultshareimage-copy.png",
+            "logo": false
+        }
+    },
+    {
+        "title": "World | Latest News & Updates | BBC News",
+        "url": "https://www.bbc.com/news/world",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Get all the <strong>latest</strong> <strong>news</strong>, live <strong>updates</strong> and content about the World from across the BBC.",
+        "profile": {
+            "name": "BBC",
+            "url": "https://www.bbc.com/news/world",
+            "long_name": "British Broadcasting Corporation",
+            "img": "https://imgs.search.brave.com/-9uoAONEhH31ac708C2NinDM9OjKbNcruJo3O1baQTM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTljMGQ4ZTFj/YzcwNTIyYTU4ZDk4/ZTg5NTQ0NGQyYjQy/NzU3NTMxNDRjZGFi/NjFkMmRiNGE1MGE5/ZDhhOWMyZS93d3cu/YmJjLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "bbc.com",
+            "hostname": "www.bbc.com",
+            "favicon": "https://imgs.search.brave.com/-9uoAONEhH31ac708C2NinDM9OjKbNcruJo3O1baQTM/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvYTljMGQ4ZTFj/YzcwNTIyYTU4ZDk4/ZTg5NTQ0NGQyYjQy/NzU3NTMxNDRjZGFi/NjFkMmRiNGE1MGE5/ZDhhOWMyZS93d3cu/YmJjLmNvbS8",
+            "path": "› news  › world"
+        }
+    },
+    {
+        "title": "Latest News Today: Breaking News and Top Headlines from India, Entertainment, Business, Politics and Sports | The Indian Express",
+        "url": "https://indianexpress.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Today&#x27;s <strong>news</strong>: Get <strong>latest</strong> and Breaking <strong>News</strong> on Politics, Business, Lifestyle, Entertainment and Sports along with <strong>News</strong> <strong>updates</strong> from around the world. Also, find English <strong>News</strong>, live coverage on Bollywood, Cricket, Technology, Celebrities and more on indianexpress.com",
+        "profile": {
+            "name": "The Indian Express",
+            "url": "https://indianexpress.com/",
+            "long_name": "indianexpress.com",
+            "img": "https://imgs.search.brave.com/4SjuU0Nl8aLEWO4BDayJHVXWCRSuG_vGZkIWx7VpdeA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2QwNGY1YWRi/MjNhNmY1YjgxYTJl/MzNjOWMyMDlkY2Iw/MmYxMGNiMmFmODcx/MDg3ZDgxMTFiZmMz/NjlkNDBkZi9pbmRp/YW5leHByZXNzLmNv/bS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "indianexpress.com",
+            "hostname": "indianexpress.com",
+            "favicon": "https://imgs.search.brave.com/4SjuU0Nl8aLEWO4BDayJHVXWCRSuG_vGZkIWx7VpdeA/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvM2QwNGY1YWRi/MjNhNmY1YjgxYTJl/MzNjOWMyMDlkY2Iw/MmYxMGNiMmFmODcx/MDg3ZDgxMTFiZmMz/NjlkNDBkZi9pbmRp/YW5leHByZXNzLmNv/bS8",
+            "path": ""
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/EwMawGiuRPGsZ9cXsUWXSK0lQCrT2WH2njZpF6VIDH8/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbmRp/YW5leHByZXNzLmNv/bS93cC1jb250ZW50/L3RoZW1lcy9pbmRp/YW5leHByZXNzL2lt/YWdlcy9JRS1PR2lt/YWdlLmpwZw",
+            "original": "https://indianexpress.com/wp-content/themes/indianexpress/images/IE-OGimage.jpg",
+            "logo": false
+        }
+    },
+    {
+        "title": "US News: Stay Updated with the Latest US News on Politics, Crime, and Local Stories of today| Hindustan Times | Hindustan Times",
+        "url": "https://www.hindustantimes.com/world-news/us-news",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "US <strong>News</strong>: Get the <strong>latest</strong> breaking <strong>news</strong>, <strong>top</strong> headlines, and in-depth coverage on politics, crime, defense, technology, entertainment, lifestyle, and local <strong>updates</strong> from across the country. Stay informed with US <strong>news</strong> stories from Hindustan Times.",
+        "profile": {
+            "name": "Hindustan Times",
+            "url": "https://www.hindustantimes.com/world-news/us-news",
+            "long_name": "hindustantimes.com",
+            "img": "https://imgs.search.brave.com/6oiSajNB7C3FmHradE3V3z23td9GnbX-OZbVqJO9gzY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjY1MjVjODdh/ZjU0MTA4Mjc4NzA0/ODM1MjllODZmNGMy/NTViMTUyNjk2ZTU1/MGZiNDRhZjI1NzRh/N2U2NTA0YS93d3cu/aGluZHVzdGFudGlt/ZXMuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "hindustantimes.com",
+            "hostname": "www.hindustantimes.com",
+            "favicon": "https://imgs.search.brave.com/6oiSajNB7C3FmHradE3V3z23td9GnbX-OZbVqJO9gzY/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNjY1MjVjODdh/ZjU0MTA4Mjc4NzA0/ODM1MjllODZmNGMy/NTViMTUyNjk2ZTU1/MGZiNDRhZjI1NzRh/N2U2NTA0YS93d3cu/aGluZHVzdGFudGlt/ZXMuY29tLw",
+            "path": "  › news  › world news"
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/uktAEWCxE5lgHZUawqPjQmyHG0pJGP1AwumScpRoRTE/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/aGluZHVzdGFudGlt/ZXMuY29tL3Jlcy9p/bWFnZXMvbG9nby5w/bmc",
+            "original": "https://www.hindustantimes.com/res/images/logo.png",
+            "logo": true
+        }
+    },
+    {
+        "title": "Latest News: Top News Stories, Updates, Videos, and Photos | NBC News",
+        "url": "https://www.nbcnews.com/latest-stories",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Get the <strong>latest</strong> <strong>top</strong> <strong>news</strong> stories and <strong>updates</strong> from NBCNews.com. Find videos and articles on the <strong>latest</strong> <strong>top</strong> US and world <strong>news</strong> stories.",
+        "profile": {
+            "name": "NBC News",
+            "url": "https://www.nbcnews.com/latest-stories",
+            "long_name": "nbcnews.com",
+            "img": "https://imgs.search.brave.com/eI6piNjPQhnQicFjMZFpnZ2HlEkQUna_5IQn9Awm0PU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzJjOWM3M2Qx/ODU2MGYwNDE1MTFk/ZGZiYTRhYjUwNDg3/NjU3NjhkMjJjMWEx/MWU5NjFiYzRiN2Rj/ZmE1NzUzMC93d3cu/bmJjbmV3cy5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "nbcnews.com",
+            "hostname": "www.nbcnews.com",
+            "favicon": "https://imgs.search.brave.com/eI6piNjPQhnQicFjMZFpnZ2HlEkQUna_5IQn9Awm0PU/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNzJjOWM3M2Qx/ODU2MGYwNDE1MTFk/ZGZiYTRhYjUwNDg3/NjU3NjhkMjJjMWEx/MWU5NjFiYzRiN2Rj/ZmE1NzUzMC93d3cu/bmJjbmV3cy5jb20v",
+            "path": "› latest-stories"
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/FSGzQ-DESrvy4KlzYwlRJTr9d4EmuNoZuMvzNgH2XWY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YTIucy1uYmNuZXdz/LmNvbS9pL25ld3Nj/bXMvMjAyMF8yNy8z/MzkzMzMwL2xhdGVz/dF9kZmNmY2ZjYjU1/NTljOTZlMzY3N2Qz/MzM5OTI2YmFjYS5q/cGc",
+            "original": "https://media2.s-nbcnews.com/i/newscms/2020_27/3393330/latest_dfcfcfcb5559c96e3677d3339926baca.jpg",
+            "logo": false
+        }
+    },
+    {
+        "title": "NDTV.com: Latest News, India News, Business, Cricket, Bollywood, Video & Breaking News",
+        "url": "https://www.ndtv.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "NDTV.com provides <strong>latest</strong> <strong>news</strong> from India and around the world. Get breaking <strong>news</strong> alerts from India and follow today’s live <strong>news</strong> <strong>updates</strong> in field of politics, business, technology, Bollywood, cricket and more.",
+        "profile": {
+            "name": "NDTV",
+            "url": "https://www.ndtv.com/",
+            "long_name": "ndtv.com",
+            "img": "https://imgs.search.brave.com/Fx_S3Utz6cTew1eBHvL5MBvwnOrxLoGREUqPYaob4vs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTVjZmNmMTNl/OTg2YzgxY2MwMTFi/MDMwYzk5OWYwMjg1/NzY1OTFmZmNiN2M1/MDc3NDc4NjQwNDUy/NGJjMjdkZC93d3cu/bmR0di5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "ndtv.com",
+            "hostname": "www.ndtv.com",
+            "favicon": "https://imgs.search.brave.com/Fx_S3Utz6cTew1eBHvL5MBvwnOrxLoGREUqPYaob4vs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOTVjZmNmMTNl/OTg2YzgxY2MwMTFi/MDMwYzk5OWYwMjg1/NzY1OTFmZmNiN2M1/MDc3NDc4NjQwNDUy/NGJjMjdkZC93d3cu/bmR0di5jb20v",
+            "path": ""
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/Q1tMMr0uPboz8BT-J2GXZKVhSFBUx3cVOcngjkqcrVc/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/bmR0di5jb20vY29t/bW9uL2ltYWdlcy9v/Z25kdHYucG5n",
+            "original": "https://cdn.ndtv.com/common/images/ogndtv.png",
+            "logo": false
+        }
+    },
+    {
+        "title": "News: Get Latest News Today, Breaking News, Top News Headlines, India and World News | News18",
+        "url": "https://www.news18.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Stay <strong>Updated</strong> <strong>with</strong> <strong>Latest</strong> <strong>News</strong> on News18: Catch Breaking <strong>News</strong>, <strong>Top</strong> <strong>News</strong> Headlines from India and Around the World. Explore Today&#x27;s <strong>Updates</strong> in Sports, Cricket, Entertainment, Business, Politics, Technology, and More. Stay Informed with Daily <strong>News</strong> and Developments Across India and Globally.",
+        "profile": {
+            "name": "News18",
+            "url": "https://www.news18.com/",
+            "long_name": "news18.com",
+            "img": "https://imgs.search.brave.com/OpF5hqfJge-zw1DD3gwjuBVaI_mSpnmIrtj5YJBuHvw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI3ZDEzZjM3/N2Y0YzBjMjUxNmNi/OTQ2ZWMzMzllZGYw/N2VhOTcwYjIzZjY1/YzZlODMxYmQ3YjFk/MmZjZTVkNC93d3cu/bmV3czE4LmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "news18.com",
+            "hostname": "www.news18.com",
+            "favicon": "https://imgs.search.brave.com/OpF5hqfJge-zw1DD3gwjuBVaI_mSpnmIrtj5YJBuHvw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGI3ZDEzZjM3/N2Y0YzBjMjUxNmNi/OTQ2ZWMzMzllZGYw/N2VhOTcwYjIzZjY1/YzZlODMxYmQ3YjFk/MmZjZTVkNC93d3cu/bmV3czE4LmNvbS8",
+            "path": ""
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/XQWL2X8GNRER-9Zid1pSWywzsDmeuR23Xotzcu83d8U/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMubmV3czE4LmNv/bS9pYm5saXZlL3Vw/bG9hZHMvMjAxOS8w/OS9uZXdzMTgtaG9t/ZS1vZy5qcGc",
+            "original": "https://images.news18.com/ibnlive/uploads/2019/09/news18-home-og.jpg",
+            "logo": false
+        }
+    },
+    {
+        "title": "World News: Top & Breaking World News Today | AP News",
+        "url": "https://apnews.com/world-news",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "White House Congress U.S. Supreme ... The <strong>latest</strong> AP-NORC polls Ground Game ... LIVE Live <strong>updates</strong>: Trump’s use of National Guard during LA immigration protests is illegal, judge rules · Trump will announce Space Command is moving from Colorado to Alabama ... Exclusive insights and key stories from the world of politics. See All Newsletters ... AP <strong>Top</strong> 25 poll preview: ...",
+        "profile": {
+            "name": "AP News",
+            "url": "https://apnews.com/world-news",
+            "long_name": "apnews.com",
+            "img": "https://imgs.search.brave.com/-_32qKbk4nzvzQ3RP6w9el0V0iswWgQP6EG3HIKvQ2s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWJlOGE2ODEz/ZDcxYzRjZDBjMzMw/OTZiMWM3ZDUwNjJk/ZTMyZDY3N2U5NTg4/ZDZhNDk3NzFiZjdh/OGQ0YTFmNi9hcG5l/d3MuY29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "apnews.com",
+            "hostname": "apnews.com",
+            "favicon": "https://imgs.search.brave.com/-_32qKbk4nzvzQ3RP6w9el0V0iswWgQP6EG3HIKvQ2s/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOWJlOGE2ODEz/ZDcxYzRjZDBjMzMw/OTZiMWM3ZDUwNjJk/ZTMyZDY3N2U5NTg4/ZDZhNDk3NzFiZjdh/OGQ0YTFmNi9hcG5l/d3MuY29tLw",
+            "path": "› world-news"
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/Eg_ksIiEcLvn7WSCtfZAEH4hutpIzgXqk8xpKZLOWWk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9kaW1z/LmFwbmV3cy5jb20v/ZGltczQvZGVmYXVs/dC9kY2FjMWE0LzIx/NDc0ODM2NDcvc3Ry/aXAvdHJ1ZS9jcm9w/LzcwMHgzOTQrMCsy/OC9yZXNpemUvMTQ0/MHg4MTAhL3F1YWxp/dHkvOTAvP3VybD1o/dHRwcyUzQSUyRiUy/RmFzc2V0cy5hcG5l/d3MuY29tJTJGOTAl/MkYyOSUyRjRlM2Mx/Y2M3NDQ2MDg5YTkx/MDFhN2JkZmY0Yzgl/MkZkZWZhdWx0c2hh/cmVpbWFnZS1jb3B5/LnBuZw",
+            "original": "https://dims.apnews.com/dims4/default/dcac1a4/2147483647/strip/true/crop/700x394+0+28/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F90%2F29%2F4e3c1cc7446089a9101a7bdff4c8%2Fdefaultshareimage-copy.png",
+            "logo": false
+        }
+    },
+    {
+        "title": "Reuters Reuters | Breaking International News & Views",
+        "url": "https://www.reuters.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "Find <strong>latest</strong> <strong>news</strong> from every corner of the globe at Reuters.com, your online source for breaking international <strong>news</strong> coverage.",
+        "profile": {
+            "name": "Reuters",
+            "url": "https://www.reuters.com/",
+            "long_name": "reuters.com",
+            "img": "https://imgs.search.brave.com/g-LRPAPxrx_Eqo7F4IKC-Guqa4ONApD9n_VKZlqfqWo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzE0MWM3N2Ji/ZjQ3ZDhmYzI3NjMz/ODNjYTRiMGI4MjM4/OTExMzRkM2E1ODI4/MjI4YzA0ZWQ0OTRk/YWY5YTQwMy93d3cu/cmV1dGVycy5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "reuters.com",
+            "hostname": "www.reuters.com",
+            "favicon": "https://imgs.search.brave.com/g-LRPAPxrx_Eqo7F4IKC-Guqa4ONApD9n_VKZlqfqWo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMzE0MWM3N2Ji/ZjQ3ZDhmYzI3NjMz/ODNjYTRiMGI4MjM4/OTExMzRkM2E1ODI4/MjI4YzA0ZWQ0OTRk/YWY5YTQwMy93d3cu/cmV1dGVycy5jb20v",
+            "path": ""
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/g6kSsqGsXudG3xtV1QoZPd0rH2l-2sQmb0lrF360_Nk/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/cmV1dGVycy5jb20v/cGYvcmVzb3VyY2Vz/L2ltYWdlcy9yZXV0/ZXJzL3JldXRlcnMt/ZGVmYXVsdC53ZWJw/P2Q9MzEx",
+            "original": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.webp?d=311",
+            "logo": false
+        }
+    },
+    {
+        "title": "Latest news from around the world | The Guardian",
+        "url": "https://www.theguardian.com/world",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "<strong>Latest</strong> World <strong>news</strong> <strong>news</strong>, comment and analysis from the Guardian, the world&#x27;s leading liberal voice",
+        "profile": {
+            "name": "The Guardian",
+            "url": "https://www.theguardian.com/world",
+            "long_name": "theguardian.com",
+            "img": "https://imgs.search.brave.com/rC70n-17a9InstnH-PH4YuXbWwFkdbesPtRJKvIQAwQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGRmYTNkMTZl/NmJhYTQwYmQ4NDRj/MzQ4NDZkNGQ0YTgy/ZWRlZDM4YWVkMzM4/NmM0Y2Y2NTgyMTQ5/NzQxOTExYy93d3cu/dGhlZ3VhcmRpYW4u/Y29tLw"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "theguardian.com",
+            "hostname": "www.theguardian.com",
+            "favicon": "https://imgs.search.brave.com/rC70n-17a9InstnH-PH4YuXbWwFkdbesPtRJKvIQAwQ/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNGRmYTNkMTZl/NmJhYTQwYmQ4NDRj/MzQ4NDZkNGQ0YTgy/ZWRlZDM4YWVkMzM4/NmM0Y2Y2NTgyMTQ5/NzQxOTExYy93d3cu/dGhlZ3VhcmRpYW4u/Y29tLw",
+            "path": "› world"
+        }
+    },
+    {
+        "title": "India News | Latest India News Headlines Today and Live Updates from India - Times of India",
+        "url": "https://timesofindia.indiatimes.com/india",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "India <strong>News</strong> Today: Get <strong>latest</strong> India <strong>news</strong> and breaking <strong>news</strong> from India on Times of India. TOI brings the <strong>top</strong> <strong>news</strong> headlines from India on Politics, Elections, Current Affairs and more",
+        "profile": {
+            "name": "Times of India",
+            "url": "https://timesofindia.indiatimes.com/india",
+            "long_name": "timesofindia.indiatimes.com",
+            "img": "https://imgs.search.brave.com/Oxsko4_I2N1R83KDQrS-hL6SqcSjQDGXF7txWj3lzbw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGRmMDA4Zjkw/NzE0ZmM5Y2QyNzMx/ZGNkOGQyMWRjODlm/MWQ0MDMzN2EyZjQ4/ODgwMzA1YTY2MTEw/MTRkMTAzYy90aW1l/c29maW5kaWEuaW5k/aWF0aW1lcy5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "timesofindia.indiatimes.com",
+            "hostname": "timesofindia.indiatimes.com",
+            "favicon": "https://imgs.search.brave.com/Oxsko4_I2N1R83KDQrS-hL6SqcSjQDGXF7txWj3lzbw/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvOGRmMDA4Zjkw/NzE0ZmM5Y2QyNzMx/ZGNkOGQyMWRjODlm/MWQ0MDMzN2EyZjQ4/ODgwMzA1YTY2MTEw/MTRkMTAzYy90aW1l/c29maW5kaWEuaW5k/aWF0aW1lcy5jb20v",
+            "path": "  › news  › india news"
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/Ik0SfQU8MXaQNLn5P5U6wguz8BlsQWQYP2R5p3lhO9Q/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudG9paW1nLmNv/bS9waG90by80NzUy/OTMwMC5jbXM",
+            "original": "https://static.toiimg.com/photo/47529300.cms",
+            "logo": false
+        }
+    },
+    {
+        "title": "NewsNation - Unbiased US News, Breaking News, Headlines & Video",
+        "url": "https://www.newsnationnow.com/",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "NewsNation is your trusted source for breaking <strong>news</strong>, unbiased U.S. <strong>news</strong> &amp; video delivered from the heartland of America delivered 24/7.",
+        "profile": {
+            "name": "NewsNation",
+            "url": "https://www.newsnationnow.com/",
+            "long_name": "newsnationnow.com",
+            "img": "https://imgs.search.brave.com/cg9RyScxmfdhJfo28Ytzg9vVvRSgO53dYk_VKmjVvhk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTlhYTAzZjFl/ZmE0MjZiODlhYTA1/MTgzN2ZhOWMxM2I4/OGU4ZjJmZjY2N2Ux/ODVkNmE1Y2IzMDNm/YjEzM2IzZS93d3cu/bmV3c25hdGlvbm5v/dy5jb20v"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "newsnationnow.com",
+            "hostname": "www.newsnationnow.com",
+            "favicon": "https://imgs.search.brave.com/cg9RyScxmfdhJfo28Ytzg9vVvRSgO53dYk_VKmjVvhk/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvZTlhYTAzZjFl/ZmE0MjZiODlhYTA1/MTgzN2ZhOWMxM2I4/OGU4ZjJmZjY2N2Ux/ODVkNmE1Y2IzMDNm/YjEzM2IzZS93d3cu/bmV3c25hdGlvbm5v/dy5jb20v",
+            "path": ""
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/icgVFwZ_St1e0wHxHH4zMkUzcRuqCl--K9GFdTT7dOI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly93d3cu/bmV3c25hdGlvbm5v/dy5jb20vd3AtY29u/dGVudC91cGxvYWRz/L3NpdGVzLzEwOC8y/MDIwLzA3L2Nyb3Bw/ZWQtZmF2aWNvbi10/cmFucGFyZW50LWJr/Zy5wbmc_c3RyaXA9/MSYjMDM4O3c9MjUw",
+            "original": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2020/07/cropped-favicon-tranparent-bkg.png?strip=1&#038;w=250",
+            "logo": true
+        }
+    },
+    {
+        "title": "World news - breaking news, video, headlines and opinion | CNN",
+        "url": "https://www.cnn.com/world",
+        "is_source_local": false,
+        "is_source_both": false,
+        "description": "View CNN world <strong>news</strong> today for international <strong>news</strong> and videos from Europe, Asia, Africa, the Middle East and the Americas.",
+        "profile": {
+            "name": "CNN",
+            "url": "https://www.cnn.com/world",
+            "long_name": "Cable News Network",
+            "img": "https://imgs.search.brave.com/tV1joo3SHuITYemc5OsCps2_N9Toz6zArm5dNdbSoMs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWE3MWZjOTZk/NGRhM2RmZDQzMjZh/NjE3OGQ3NzQ3MDI5/NDJiOGI2ZDdkZDFj/ODI3N2MzYWU3OGU4/YzQ3YTNkNC93d3cu/Y25uLmNvbS8"
+        },
+        "language": "en",
+        "family_friendly": true,
+        "type": "search_result",
+        "subtype": "generic",
+        "is_live": false,
+        "meta_url": {
+            "scheme": "https",
+            "netloc": "cnn.com",
+            "hostname": "www.cnn.com",
+            "favicon": "https://imgs.search.brave.com/tV1joo3SHuITYemc5OsCps2_N9Toz6zArm5dNdbSoMs/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvNWE3MWZjOTZk/NGRhM2RmZDQzMjZh/NjE3OGQ3NzQ3MDI5/NDJiOGI2ZDdkZDFj/ODI3N2MzYWU3OGU4/YzQ3YTNkNC93d3cu/Y25uLmNvbS8",
+            "path": "› world"
+        },
+        "thumbnail": {
+            "src": "https://imgs.search.brave.com/PDPGPKCQfwpmqJV4dO9s7dYjEFBHM9cvSYf1EY1_IaY/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5jbm4uY29tL2Fw/aS92MS9pbWFnZXMv/Y25uL2Nubi1wbGFj/ZWhvbGRlci1pbWFn/ZS5qcGVn",
+            "original": "https://media.cnn.com/api/v1/images/cnn/cnn-placeholder-image.jpeg",
+            "logo": false
+        }
+    }
+]

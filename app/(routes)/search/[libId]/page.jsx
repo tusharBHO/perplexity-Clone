@@ -1,33 +1,39 @@
+// app/(routes)/search/[libId]/page.jsx
 "use client"
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { supabase } from '../../../../services/supabase';
-import Header from './_components/Header'
 import DisplayResult from './_components/DisplayResult'
 
 function SearchQueryResult() {
   const { libId } = useParams()
-  const [searchInputRecord, setSearchInputRecord] = useState();
+  const [searchInputRecord, setSearchInputRecord] = useState(null)
 
   useEffect(() => {
-    GetSearchQueryRecord();
+    GetSearchQueryRecord()
   }, [])
 
   const GetSearchQueryRecord = async () => {
     let { data: Library, error } = await supabase
       .from('Library')
-      .select('*,Chats(*)')
+      .select('*, Chats(*)')
       .eq('libId', libId)
 
-    setSearchInputRecord(Library[0]);
+    if (!error && Library?.length > 0) {
+      setSearchInputRecord(Library[0])
+    }
   }
 
   return (
-    <div>
-      <Header searchInputRecord={searchInputRecord} />
-
-      <div className='px-10 md:px-20 lg:px-36 xl:px-56 mt-20'>
-        <DisplayResult searchInputRecord={searchInputRecord} />
+    <div className="md:ml-14 bg-primary h-full">
+      <div className="px-5 sm:px-10 md:px-20 lg:px-36 xl:px-56 md:pt-10">
+        {searchInputRecord ? (
+          <DisplayResult searchInputRecord={searchInputRecord} />
+        ) : (
+          <div className="text-center text-muted mt-10">
+            Loading your search...
+          </div>
+        )}
       </div>
     </div>
   )

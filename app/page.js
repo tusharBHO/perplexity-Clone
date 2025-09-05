@@ -12,3 +12,6 @@ export default function Home() {
 // Reamain Drama -> 00:00:00
 // command to run in terminal : npm run dev
 // command to run in terminal : npx inngest-cli@latest dev
+
+// Task for me:
+// 1. make the different ai models available in the chat input box inlcuding openai

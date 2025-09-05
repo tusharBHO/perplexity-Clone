@@ -1,3 +1,4 @@
+// app/api/get-inngest-status/route.jsx
 import axios from "axios";
 import { NextResponse } from "next/server";
 
@@ -6,6 +7,7 @@ export async function POST(req) {
 
     try {
         const result = await axios.get(process.env.INNGEST_SERVER_HOST + '/v1/events/' + runId + '/runs', {
+        // const result = await axios.get(process.env.INNGEST_SERVER_HOST + '/v1/' + '/runs' + runId, {
             headers: {
                 Authorization: `Bearer ${process.env.INNGEST_SIGNING_KEY}`,
             }

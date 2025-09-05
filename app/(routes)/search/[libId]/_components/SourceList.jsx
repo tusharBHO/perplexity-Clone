@@ -1,30 +1,51 @@
-import Image from 'next/image'
-import React from 'react'
+// app/(routes)/search/[libId]/_components/SourceList.jsx
+import Image from "next/image";
+import React from "react";
 
 function SourceList({ webResult, loadingSearch }) {
+    const fallback = "/fallback.jpg"; // neutral placeholder image in /public
+
     return (
-        <div className='flex gap-2 flex-wrap mt-5'>
-            {webResult?.map((item, index) => (
-                <div key={index} className='p-3 bg-accent rounded-lg w-[200px] cursor-pointer hover:bg-[#e1e3da]'
-                    onClick={() => window.open(item.url, '_blank')}>
-
-                    <div className='flex gap-2 items-center'>
-                        <Image src={item?.img} alt={item?.name || "Source image"} width={20} height={20} />
-
-                        <h2 className='text-xs'>{item?.long_name}</h2>
-                    </div>
-
-                    <h2 className='line-clamp-2 text-black text-xs'>{item?.description}</h2>
+        <div className="flex gap-0 md:gap-2 flex-wrap mt-3">
+            {/* Show skeletons while loading */}
+            {loadingSearch && !webResult && (
+                <div className="flex flex-wrap gap-2 w-full">
+                    {[1, 2, 3, 4].map((_, index) => (
+                        <div
+                            key={index}
+                            className=" h-[28px] rounded-full bg-secondary animate-pulse w-[70px] sm:w-[90px] md:w-[110px] "
+                        />
+                    ))}
                 </div>
-            ))}
+            )}
 
-            {loadingSearch &&
-                <div className='flex flex-wrap gap-2'>
-                    {[1, 2, 3, 4].map((item, index) => (
-                        <div className='w-[200px] h-[100px] rounded-2xl bg-accent animate-pulse' key={index}></div>
-                    ))}</div>}
+            {/* Show real data */}
+            {!loadingSearch &&
+                webResult?.map((item, index) => (
+                    <div
+                        key={index}
+                        onClick={() => window.open(item.url, "_blank")}
+                        className="flex items-center gap-2 px-1 sm:px-3 py-1 rounded-full 
+                       bg-secondary hover:bg-accent/10 cursor-pointer 
+                       transition-colors shadow-sm"
+                    >
+                        {/* Favicon */}
+                        <Image
+                            src={item?.img || "/fallback.png"}
+                            alt={item?.name || ""}
+                            width={16}
+                            height={16}
+                            className="rounded-sm"
+                        />
+
+                        {/* Site name */}
+                        <span className="hidden sm:block text-xs text-dark truncate max-w-[100px]">
+                            {item?.long_name || "Source"}
+                        </span>
+                    </div>
+                ))}
         </div>
-    )
+    );
 }
 
-export default SourceList
+export default SourceList;

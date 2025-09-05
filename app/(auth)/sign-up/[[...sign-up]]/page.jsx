@@ -1,9 +1,20 @@
-import { SignUp } from '@clerk/nextjs'
+"use client";
+import { SignUp } from "@clerk/nextjs";
 
-export default function Page() {
+export default function SignUpPage() {
   return (
-      <div className='flex items-center justify-center h-screen w-full'>
-        <SignUp />
-      </div>
-    )
-} 
+    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+      <SignUp
+        path="/sign-up"
+        routing="path"
+        signInUrl="/sign-in"
+        // 👇 hides "Secured by Clerk" footer
+        appearance={{
+          elements: {
+            footer: "hidden",
+          },
+        }}
+      />
+    </div>
+  );
+}

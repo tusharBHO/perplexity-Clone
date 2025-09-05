@@ -1,3 +1,4 @@
+// app/api/inngest/route.js
 import { serve } from "inngest/next";
 import { inngest } from "../../../inngest/client";
 import { helloWorld, llmModel } from "../../../inngest/functions";

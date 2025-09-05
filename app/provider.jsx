@@ -29,7 +29,7 @@ function Provider({ children }) {
                     },
                 ])
                 .select()
-                
+
             setUserDetail(data[0]);
             return;
         }
