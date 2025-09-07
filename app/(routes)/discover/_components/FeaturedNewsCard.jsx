@@ -7,7 +7,7 @@ function FeaturedNewsCard({ news }) {
 
     return (
         <div
-            className="flex flex-col-reverse items-center sm:flex-row rounded-2xl cursor-pointer overflow-hidden transition border border-theme md:border-none bg-secondary sm:bg-primary"
+            className="flex flex-col-reverse items-center sm:flex-row rounded-2xl cursor-pointer overflow-hidden transition border border-theme md:border-none bg-secondary sm:bg-primary w-[90vw] md:w-auto"
             onClick={() => window.open(news?.url, '_blank')}
         >
             {/* Left side: text */}
@@ -28,7 +28,7 @@ function FeaturedNewsCard({ news }) {
 
             {/* Right side: image with fallback */}
             {news?.thumbnail?.original ? (
-                <div className="w-[85vw] pt-2 sm:p-0 rounded-t-xl sm:w-1/2 h-72 sm:h-68 md:h-72 rounded-xl overflow-hidden">
+                <div className="pt-2 py-0 sm:p-0 rounded-t-xl w-[85vw] sm:w-1/2 h-72 sm:h-68 md:h-72 rounded-xl overflow-hidden">
                     <img
                         src={news.thumbnail.original}
                         alt={news?.title}

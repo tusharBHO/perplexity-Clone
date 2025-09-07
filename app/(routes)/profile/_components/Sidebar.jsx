@@ -23,9 +23,9 @@ export default function Sidebar({ onClose }) {
                     router.push('/');
                     if (onClose) onClose();
                 }}
-                className="flex items-center gap-2 px-2 py-1 mb-6 text-sm text-muted rounded-sm bg-sHover-hover"
+                className="flex items-center gap-2 px-2 py-1 mb-6 text-lg md:text-sm text-muted rounded-sm bg-sHover-hover"
             >
-                <ArrowLeft className="w-4 h-4" />
+                <ArrowLeft className="w-5 h-5 md:w-4 md:h-4" />
                 Back
             </button>
 

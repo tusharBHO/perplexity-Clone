@@ -106,7 +106,7 @@ function Discover() {
                 <div className="overflow-y-scroll snap-y snap-mandatory h-[calc(100vh-214px)] mt-6">
                     {latestNews.map((news, idx) => (
                         // <div key={idx} className="snap-start h-[605px] mb-4 border-2 border-red-600">
-                        <div key={idx} className="snap-start h-[605px] mb-4">
+                        <div key={idx} className="snap-start h-[605px] mb-0 flex flex-col items-center">
                             <FeaturedNewsCard news={news} />
                         </div>
                     ))}

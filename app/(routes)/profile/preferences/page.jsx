@@ -22,12 +22,12 @@ export default function Preferences() {
         <div className="w-full h-[calc(100vh-52px)] px-4 sm:px-6 md:px-8 ">
             {/* Appearance Section */}
             <section className="mb-10">
-                <h1 className="text-lg font-semibold text-dark">Preferences</h1>
+                <h1 className="text-xl md:text-lg font-semibold text-dark">Preferences</h1>
                 <div className="border-t border-theme my-4"></div>
-                <div className="flex flex-row items-center justify-between gap-2">
+                <div className="flex flex-row items-center justify-between">
                     <div>
-                        <p className="text-dark text-sm">Appearance</p>
-                        <p className="text-muted text-xs">
+                        <p className="text-dark text-[17px] md:text-sm">Appearance</p>
+                        <p className="text-muted text-sm md:text-xs">
                             How Perplexity looks on your device
                         </p>
                     </div>
@@ -37,14 +37,14 @@ export default function Preferences() {
 
             {/* AI Section */}
             <section>
-                <h2 className="text-lg font-semibold text-dark">Artificial Intelligence</h2>
+                <h2 className="text-xl md:text-lg font-semibold text-dark">Artificial Intelligence</h2>
                 <div className="border-t border-theme my-4"></div>
 
                 {/* Model Selection */}
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-6">
                     <div>
-                        <p className="text-sm text-dark">Model</p>
-                        <p className="text-muted text-xs">
+                        <p className="text-[17px] md:text-sm text-dark">Model</p>
+                        <p className="text-muted text-sm md:text-xs">
                             Now includes Claude 4.0, GPT-4.1, and Sonar
                         </p>
                     </div>

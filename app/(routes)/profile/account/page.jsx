@@ -66,7 +66,7 @@ export default function AccountInfo() {
         <div className="w-full h-[calc(100vh-52px)] px-4 sm:px-6 md:px-10 overflow-y-scroll">
             {/* Account Section */}
             <section className="mb-10">
-                <h1 className="text-lg font-semibold text-dark">Account</h1>
+                <h1 className="text-xl md:text-lg font-semibold text-dark">Account</h1>
                 <div className="border-t border-theme my-4"></div>
 
                 {/* Profile Info */}
@@ -77,13 +77,13 @@ export default function AccountInfo() {
                         className="w-16 h-16 rounded-full"
                     />
                     <div className="text-center sm:text-left">
-                        <p className="text-dark">{user.fullName}</p>
-                        <p className="text-xs text-muted">{user.username}</p>
-                        <p className="text-xs text-muted">{user.primaryEmailAddress?.emailAddress}</p>
+                        <p className="text-lg text-dark">{user.fullName}</p>
+                        {/* <p className="text-xs text-muted">{user.username}</p> */}
+                        <p className="text-sm md:text-xs text-muted">{user.primaryEmailAddress?.emailAddress}</p>
                     </div>
 
                     <div className="sm:ml-auto">
-                        <label className="block w-full rounded border border-theme px-3 py-1 text-xs cursor-pointer text-muted bg-pHover-hover text-center sm:text-left">
+                        <label className="block w-full rounded border border-theme px-3 py-1 text-sm md:text-xs cursor-pointer text-muted bg-pHover-hover text-center sm:text-left">
                             Change avatar
                             <input
                                 type="file"
@@ -108,50 +108,50 @@ export default function AccountInfo() {
                 <div className="space-y-4">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                         <div>
-                            <p className="text-xs text-muted">Full Name</p>
-                            <p className="text-sm text-dark">{user.fullName}</p>
+                            <p className="text-sm md:text-xs text-muted">Full Name</p>
+                            <p className="text-[17px] md:text-sm text-dark">{user.fullName}</p>
                         </div>
                         <button
                             onClick={() => setOpenDialog(true)}
-                            className="rounded border border-theme px-3 py-1 text-xs text-muted bg-pHover-hover"
+                            className="rounded border border-theme px-3 py-1 text-sm md:text-xs text-muted bg-pHover-hover"
                         >
                             Change full name
                         </button>
                     </div>
 
                     <div>
-                        <p className="text-xs text-muted">Email</p>
-                        <p className="text-sm text-dark">{user.primaryEmailAddress?.emailAddress}</p>
+                        <p className="text-sm md:text-xs text-muted">Email</p>
+                        <p className="text-[17px] md:text-sm text-dark">{user.primaryEmailAddress?.emailAddress}</p>
                     </div>
                 </div>
             </section>
 
             {/* System Section */}
             <section className="pb-3">
-                <h2 className="text-lg text-dark font-semibold">System</h2>
+                <h2 className="text-xl md:text-lg text-dark font-semibold">System</h2>
                 <div className="border-t border-theme my-4"></div>
 
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-5 md:mb-3 gap-2">
-                    <p className="text-sm text-dark">Support</p>
+                    <p className="text-[17px] md:text-sm text-dark">Support</p>
                     <button
                         onClick={() => router.push("/contact")}
-                        className="rounded border border-theme px-3 py-1 text-xs text-muted bg-pHover-hover"
+                        className="rounded border border-theme px-3 py-1 text-sm md:text-xs text-muted bg-pHover-hover"
                     >
                         Contact
                     </button>
                 </div>
 
                 <div className="mb-4 md:mb-3">
-                    <p className="text-sm text-muted">
+                    <p className="text-[17px] md:text-sm text-muted">
                         You are signed in as <span className="font-semibold text-dark">{user.primaryEmailAddress?.emailAddress}</span>
                     </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-5 md:mb-3 gap-2">
-                    <p className="text-sm text-dark">Sign out</p>
+                    <p className="text-[17px] md:text-sm text-dark">Sign out</p>
                     <button
                         onClick={handleSignOut}
-                        className="rounded border border-theme px-3 py-1 text-xs text-muted bg-pHover-hover"
+                        className="rounded border border-theme px-3 py-1 text-[17px] md:text-xs text-muted bg-pHover-hover"
                     >
                         Sign out
                     </button>
@@ -159,12 +159,12 @@ export default function AccountInfo() {
 
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-5 md:mb-3 gap-2">
                     <div>
-                        <p className="text-sm text-dark">Sign out of all sessions</p>
-                        <p className="text-xs text-muted">Devices or browsers where you are signed in</p>
+                        <p className="text-[17px] md:text-sm text-dark">Sign out of all sessions</p>
+                        <p className="text-sm md:text-xs text-muted">Devices or browsers where you are signed in</p>
                     </div>
                     <button
                         onClick={handleSignOutAll}
-                        className="rounded border border-theme px-3 py-1 text-xs text-muted bg-pHover-hover"
+                        className="rounded border border-theme px-3 py-1 text-sm md:text-xs text-muted bg-pHover-hover"
                     >
                         Sign out of all sessions
                     </button>
@@ -172,12 +172,12 @@ export default function AccountInfo() {
 
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                     <div>
-                        <p className="text-sm text-dark">Delete account</p>
-                        <p className="text-xs text-muted">Permanently delete your account and data</p>
+                        <p className="text-[17px] md:text-sm text-dark">Delete account</p>
+                        <p className="text-sm md:text-xs text-muted">Permanently delete your account and data</p>
                     </div>
                     <button
                         onClick={handleDeleteAccount}
-                        className="rounded border border-theme px-3 py-1 text-xs text-muted bg-pHover-hover"
+                        className="rounded border border-theme px-3 py-1 text-sm md:text-xs text-muted bg-pHover-hover"
                     >
                         Delete Account
                     </button>
