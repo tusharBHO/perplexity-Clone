@@ -266,7 +266,7 @@ export default function AppSidebar() {
                                                 <div
                                                     key={i}
                                                     className="ml-8 flex items-center justify-between gap-2 px-0 py-1 rounded-md 
-                            transition-all duration-200 cursor-pointer hover:bg-secondary"
+                            transition-all duration-200 cursor-pointer hover:bg-secondary mb-3"
                                                 >
                                                     <li
                                                         className="text-[17px] cursor-pointer list-none text-muted truncate"
