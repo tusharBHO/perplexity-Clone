@@ -49,7 +49,7 @@ function Library() {
             </p>
 
             {/* History List */}
-            <div className="mt-5 h-[75vh] overflow-y-scroll">
+            <div className="mt-5 h-[78vh] overflow-y-scroll">
                 {libraryHistory.length > 0 ? (
                     libraryHistory.map((item, index) => (
                         <div
@@ -74,7 +74,7 @@ function Library() {
                             <div className="flex items-center justify-center gap-5">
                                 <Trash2
                                     onClick={() => handleDelete(item.libId)}
-                                    className="h-4 w-4 text-muted hover:text-red-500 cursor-pointer"
+                                    className="h-5 w-5 md:h-4 md:w-4 text-muted hover:text-red-500 cursor-pointer"
                                 />
                                 <SquareArrowOutUpRight
                                     onClick={() => router.push('/search/' + item.libId)}

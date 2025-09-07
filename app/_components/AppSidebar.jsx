@@ -207,7 +207,7 @@ export default function AppSidebar() {
 
             {/* Mobile Header with Hamburger */}
             {/* <div className="md:hidden fixed top-0 left-0 w-full flex items-center justify-between z-10 p-2 bg-secondary border-b border-theme"> */}
-            <div className="md:hidden fixed top-0 left-0 w-full flex items-center justify-between z-10 p-2 bg-pink-600 sm:bg-red-600 md:bg-orange-600 border-b border-theme">
+            <div className="md:hidden fixed top-0 left-0 w-full flex items-center justify-between z-10 p-2 bg-secondary border-b border-theme">
                 <button onClick={() => setIsMobileOpen(!isMobileOpen)}>
                     <Menu className="h-6 w-6 text-dark" />
                 </button>
@@ -215,7 +215,7 @@ export default function AppSidebar() {
 
             {/* Mobile Sidebar Drawer */}
             {isMobileOpen && (
-                <div className="md:hidden fixed top-0 left-0 flex flex-col h-screen max-h-[100vh] w-72 bg-secondary z-50 px-1 animate-[slideIn_0.3s_ease-out] border-r border-theme">
+                <div className="md:hidden fixed top-0 left-0 flex flex-col h-screen max-h-[100vh] w-78 bg-secondary z-50 px-1 animate-[slideIn_0.3s_ease-out] border-r border-theme">
                     <div>
                         <button onClick={() => setIsMobileOpen(false)} className="flex items-center gap-2 text-dark">
                             {/* <X className="h-5 w-5 text-dark" /> */}
@@ -279,7 +279,7 @@ export default function AppSidebar() {
                                                             e.stopPropagation();
                                                             handleDeleteLibraryItem(libIdsArray[i]);
                                                         }}
-                                                        className="h-3 w-3 text-muted cursor-pointer hover:scale-110 transition-transform"
+                                                        className="h-4 w-4 md:h-3 md:w-3 text-muted cursor-pointer hover:scale-110 transition-transform"
                                                     />
                                                 </div>
                                             ))}
@@ -288,7 +288,7 @@ export default function AppSidebar() {
                                 </div>
                             );
                         })}
-                        <div className="h-[40px] w-full px-0 flex items-center justify-start gap-2 bg-red-600">
+                        <div className="h-[40px] w-full px-0 flex items-center justify-start gap-2">
                             <CustomUserMenu />
                             <p className="font-medium text-dark text-lg">{user?.fullName}</p>
                         </div>
