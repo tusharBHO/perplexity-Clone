@@ -215,7 +215,7 @@ export default function AppSidebar() {
 
             {/* Mobile Sidebar Drawer */}
             {isMobileOpen && (
-                <div className="md:hidden fixed top-0 left-0 flex flex-col h-screen max-h-[100vh] w-68 bg-secondary z-50 px-1 animate-[slideIn_0.3s_ease-out] border-r border-theme">
+                <div className="md:hidden fixed top-0 left-0 flex flex-col h-screen max-h-[100vh] w-72 bg-secondary z-50 px-1 animate-[slideIn_0.3s_ease-out] border-r border-theme">
                     <div>
                         <button onClick={() => setIsMobileOpen(false)} className="flex items-center gap-2 text-dark">
                             {/* <X className="h-5 w-5 text-dark" /> */}
@@ -223,7 +223,7 @@ export default function AppSidebar() {
                         </button>
                     </div>
 
-                    <nav className="flex flex-col h-full gap-3">
+                    <nav className="flex flex-col h-full">
                         {MenuOptions.map((menu, idx) => {
                             const isActiveRoute = menu.path === "/"
                                 ? path === "/"
@@ -244,7 +244,7 @@ export default function AppSidebar() {
                                     {/* Submenu (for Home & Discover) */}
                                     {menu.title !== "Library" && menu.submenu && (
                                         <ul
-                                            className={`ml-8 mt-1 space-y-1`}
+                                            className={`ml-8 mt-1 mb-3 space-y-1`}
                                         >
                                             {menu.submenu.map((item, i) => (
                                                 <li
@@ -261,7 +261,7 @@ export default function AppSidebar() {
                                     {/* Library Items */}
                                     {menu.title === "Library" && (
                                         // <div className="w-full pr-1 h-[calc(100vh-390px)] overflow-y-scroll overflow-x-hidden">
-                                        <div className="w-full pr-1 h-[calc(100vh-420px)] overflow-y-scroll overflow-x-hidden">
+                                        <div className="w-full pr-1 h-[calc(100vh-400px)] overflow-y-scroll overflow-x-hidden">
                                             {searchInputsArray.map((item, i) => (
                                                 <div
                                                     key={i}
@@ -288,7 +288,7 @@ export default function AppSidebar() {
                                 </div>
                             );
                         })}
-                        <div className="h-[50px] w-full px-0 flex items-center justify-start gap-2">
+                        <div className="h-[40px] w-full px-0 flex items-center justify-start gap-2 bg-red-600">
                             <CustomUserMenu />
                             <p className="font-medium text-dark text-lg">{user?.fullName}</p>
                         </div>
