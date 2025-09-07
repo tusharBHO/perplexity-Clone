@@ -233,7 +233,7 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                                                     onClick={handleCopy}
                                                     className="absolute top-2 right-2 px-2 py-1 rounded-md text-xs bg-secondary text-muted01 hover:bg-accent hover:text-primary transition-colors flex items-center gap-1"
                                                 >
-                                                    <Copy className="w-3 h-3" />
+                                                    <Copy className="h-4 w-4 md:w-3 md:h-3" />
                                                     {copied ? "Copied!" : "Copy"}
                                                 </button>
 
@@ -265,6 +265,8 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                 </div>
             )}
 
+            {/* <hr /> */}
+
             {/* Copy All Button + Like/Dislike */}
             <div className="flex items-center gap-3 my-4">
                 <button
@@ -273,7 +275,7 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                     title={copiedAll ? "Copied!" : "Copy All"}
                 >
                     <Copy
-                        className="w-3 h-3"
+                        className="w-4 h-4 md:w-3 md:h-3"
                         fill={copiedAll ? "#b0b0b0" : "none"}
                     />
                 </button>
@@ -285,7 +287,7 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                         className="flex items-center gap-1 px-2 py-1 rounded-md text-xs bg-secondary text-muted01 bg-sHover-hover transition-colors"
                     >
                         <ThumbsUp
-                            className="w-3 h-3"
+                            className="w-4 h-4 md:w-3 md:h-3"
                             fill={feedback === "like" ? "#b0b0b0" : "none"}
                         />
                     </button>
@@ -296,7 +298,7 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                         className="flex items-center gap-1 px-2 py-1 rounded-md text-xs bg-secondary text-muted01 bg-sHover-hover transition-colors"
                     >
                         <ThumbsDown
-                            className="w-3 h-3"
+                            className="w-4 h-4 md:w-3 md:h-3"
                             fill={feedback === "dislike" ? "#b0b0b0" : "none"}
                         />
                     </button>
@@ -322,7 +324,7 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                             {deleting ? (
                                 <span className="animate-spin w-3 h-3 border-2 border-muted01 border-t-transparent rounded-full"></span>
                             ) : (
-                                <Trash2 className="w-3 h-3" />
+                                <Trash2 className="w-4 h-4 md:w-3 md:h-3" />
                             )}
                         </button>
                     )}

@@ -64,7 +64,7 @@ export default function AudioRecorder({ onTranscriptChange }) {
             className="rounded-sm text-gray-500 bg-sHover-hover cursor-pointer"
             aria-label={isRecording ? "Stop recording" : "Start recording"}
         >
-            <Mic className={`p-2 h-8 w-8 ${isRecording ? "text-green-600" : "text-gray-500"}`} />
+            <Mic className={`p-2 h-9 w-9 md:h-8 md:w-8 ${isRecording ? "text-green-600" : "text-gray-500"}`} />
         </button>
     );
 }// }

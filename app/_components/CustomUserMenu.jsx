@@ -13,31 +13,31 @@ export default function CustomUserMenu() {
         <Popover>
             {/* Trigger (Avatar button) */}
             <PopoverTrigger asChild>
-                <Button variant="ghost" className="p-0 rounded-full cursor-pointer">
+                <button variant="ghost" className="p-0 rounded-full cursor-pointer">
                     {isSignedIn ? (
                         <img
                             src={user?.imageUrl}
                             alt="avatar"
-                            className="w-7 h-7 rounded-full border border-theme shadow bg-primary"
+                            className="md:w-9 md:h-9 w-7 h-7 rounded-full border border-theme shadow bg-primary"
                         />
                     ) : (
-                        <div className="w-7 h-7 flex items-center justify-center rounded-full border border-theme shadow bg-secondary">
-                            <User className="w-5 h-5 text-muted" />
+                        <div className="flex items-center justify-center rounded-full border border-theme shadow bg-secondary">
+                            <User className="md:w-7 md:h-7 w-5 h-5 text-muted" />
                         </div>
                     )}
-                </Button>
+                </button>
             </PopoverTrigger>
 
             {/* Popover content */}
             <PopoverContent
-                className="w-46 p-2 space-y-1 rounded-xl shadow-lg 
+                className="w-46 p-2 space-y-1 rounded-lg shadow-lg 
                    border border-theme bg-primary text-dark"
             >
                 {isSignedIn ? (
                     <>
                         {/* User info */}
                         <div className="px-2 py-1.5">
-                            <p className="font-medium text-dark text-sm">{user?.fullName}</p>
+                            <p className="font-medium text-dark text-lg">{user?.fullName}</p>
                             <p className="text-xs text-muted">
                                 {user?.primaryEmailAddress?.emailAddress}
                             </p>
@@ -46,59 +46,59 @@ export default function CustomUserMenu() {
                         <hr className="my-2 border-theme" />
 
                         <Link href="/profile/account">
-                            <Button
+                            <button
                                 variant="ghost"
-                                className="!pl-1 h-7 w-full justify-start gap-2 text-dark text-xs bg-pHover-hover"
+                                className="!pl-1 h-7 w-full justify-start gap-2 text-dark text-sm bg-pHover-hover flex items-center"
                             >
-                                <User className="w-2 h-2 text-accent" /> Account
-                            </Button>
+                                <User className="h-5 w-5 md:w-4 md:h-4 text-accent" /> Account
+                            </button>
                         </Link>
 
                         <Link href="/profile/preferences">
-                            <Button
+                            <button
                                 variant="ghost"
-                                className="!pl-1 w-full justify-start gap-2 text-dark h-7 text-xs bg-pHover-hover"
+                                className="!pl-1 w-full justify-start gap-2 text-dark h-7 text-sm bg-pHover-hover flex items-center"
                             >
-                                <Sliders style={{ scale: 0.80 }} className=" text-accent" /> Preferences
-                            </Button>
+                                <Sliders className="h-5 w-5 md:w-4 md:h-4 text-accent" /> Preferences
+                            </button>
                         </Link>
 
                         <Link href="/profile/account">
-                            <Button
+                            <button
                                 variant="ghost"
-                                className="!pl-1 w-full justify-start gap-2 text-dark h-7 text-xs bg-pHover-hover"
+                                className="!pl-1 w-full justify-start gap-2 text-dark h-7 text-sm bg-pHover-hover flex items-center"
                             >
-                                <Settings style={{ scale: 0.80 }} className=" text-accent" /> All Settings
-                            </Button>
+                                <Settings className="h-5 w-5 md:w-4 md:h-4 text-accent" /> All Settings
+                            </button>
                         </Link>
 
                         <hr className="my-2 border-theme" />
 
-                        <Button
+                        <button
                             variant="ghost"
-                            className="!pl-1 h-7 w-full justify-start gap-2 text-red-600 hover:text-red-500 hover:bg-secondary"
+                            className="!pl-1 h-7 w-full justify-start gap-2 text-sm text-red-600 hover:text-red-500 hover:bg-secondary flex items-center"
                             onClick={() => signOut()}
                         >
-                            <LogOut style={{ scale: 0.80 }} className="" /> Logout
-                        </Button>
+                            <LogOut className="h-5 w-5 md:w-4 md:h-4 " /> Logout
+                        </button>
                     </>
                 ) : (
                     <>
                         <Link href="/sign-in">
-                            <Button
+                            <button
                                 variant="ghost"
-                                className="!pl-1 h-7 w-full justify-start gap-2 text-dark text-xs hover:bg-secondary"
+                                className="!pl-1 h-7 w-full justify-start gap-2 text-dark text-sm hover:bg-secondary flex items-center"
                             >
-                                <LogIn style={{ scale: 0.85 }} className=" text-accent" /> Sign In
-                            </Button>
+                                <LogIn className="h-5 w-5 md:w-4 md:h-4 text-accent" /> Sign In
+                            </button>
                         </Link>
                         <Link href="/sign-up">
-                            <Button
+                            <button
                                 variant="ghost"
-                                className="!pl-1 h-7 w-full justify-start gap-2 text-dark text-xs hover:bg-secondary"
+                                className="!pl-1 h-7 w-full justify-start gap-2 text-dark text-sm hover:bg-secondary flex items-center"
                             >
-                                <UserPlus style={{ scale: 0.85 }} className=" text-accent" /> Sign Up
-                            </Button>
+                                <UserPlus className="h-5 w-5 md:w-4 md:h-4 text-accent" /> Sign Up
+                            </button>
                         </Link>
                     </>
                 )}

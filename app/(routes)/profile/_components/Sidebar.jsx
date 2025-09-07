@@ -15,7 +15,7 @@ export default function Sidebar({ onClose }) {
     ];
 
     return (
-        <aside className="w-54 h-full border-theme border-r sm:px-4 sm:py-6 bg-primary">
+        <aside className="w-68 h-full border-theme border-r sm:px-4 sm:py-6 bg-primary">
             {/* Back button */}
             <button
                 onClick={() => {
@@ -23,13 +23,13 @@ export default function Sidebar({ onClose }) {
                     router.push('/');
                     if (onClose) onClose();
                 }}
-                className="flex items-center gap-2 px-2 py-1 mb-6 text-sm text-muted rounded-md bg-sHover-hover"
+                className="flex items-center gap-2 px-2 py-1 mb-6 text-sm text-muted rounded-sm bg-sHover-hover"
             >
                 <ArrowLeft className="w-4 h-4" />
                 Back
             </button>
 
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
 
             {/* Navigation */}
             <nav>
@@ -44,7 +44,7 @@ export default function Sidebar({ onClose }) {
                                     className={`flex items-center px-4 py-1 rounded-md text-dark bg-sHover-hover ${isActive ? "bg-sHover font-semibold" : ""
                                         }`}
                                 >
-                                    <span className="text-sm">{name}</span>
+                                    <span className="text-[17px]">{name}</span>
                                 </Link>
                             </li>
                         );

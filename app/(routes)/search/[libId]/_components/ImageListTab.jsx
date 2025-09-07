@@ -8,7 +8,8 @@ function ImageListTab({ chat, loading }) {
   const placeholders = Array.from({ length: 8 });
 
   return (
-    <div className="max-w-[80vw] mx-auto columns-2 sm:columns-3 md:columns-4 gap-4 mt-6 [column-fill:_balance]">
+    // <div className="max-w-[80vw] mx-auto columns-2 sm:columns-3 md:columns-4 gap-4 mt-6 [column-fill:_balance]">
+    <div className="columns-2 sm:columns-3 md:columns-4 gap-4 mt-6 [column-fill:_balance]">
       {loading ? (
         // Loading placeholders
         placeholders.map((_, index) => (

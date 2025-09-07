@@ -151,41 +151,41 @@ export default function LibraryHeaderActions({ library, onTitleChange }) {
     return (
         <>
             {/* Share Button */}
-            <Button
+            <button
                 variant="ghost"
                 size="icon"
                 onClick={handleShare}
-                className="hover:bg-secondary rounded-full relative"
+                className="hover:bg-secondary rounded-full relative md:mr-2 mr-0"
                 title="Share"
             >
-                <Share2 className="text-dark" />
+                <Share2 className="h-5 w-5 md:h-4 md:w-4 text-dark" />
                 {copied && (
-                    <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs bg-dark text-white px-2 py-0.5 rounded-md">
+                    <span className="absolute z-30 -bottom-7 left-1/2 -translate-x-1/2 text-xs bg-dark text-white px-2 py-0.5 rounded-md">
                         Copied!
                     </span>
                 )}
-            </Button>
+            </button>
 
             <Popover>
                 {/* Trigger button */}
                 <PopoverTrigger asChild>
-                    <Button
+                    <button
                         variant="ghost"
                         size="icon"
-                        className="p-2 rounded-md hover:bg-secondary border border-theme"
+                        className="rounded-md hover:bg-secondary "
                     >
-                        <EllipsisVertical className="w-5 h-5 text-dark rotate-90" />
-                    </Button>
+                        <EllipsisVertical className="md:w-5 md:h-5 w-6 h-6 text-dark" />
+                    </button>
                 </PopoverTrigger>
 
                 {/* Popover box */}
                 <PopoverContent
                     align="end"
                     sideOffset={6}
-                    className="w-56 p-2 rounded-xl shadow-lg border border-theme bg-primary text-dark"
+                    className="w-56 p-2 rounded-lg shadow-lg border border-theme bg-primary text-dark"
                 >
                     {/* Title */}
-                    <div className="px-2 py-1.5 flex items-center justify-between text-xs font-medium text-dark">
+                    <div className="px-2 py-1.5 flex items-center justify-between text-[17px] md:text-xs font-medium text-dark">
                         {!isEditing ? (
                             <>
                                 <span>{title}</span>
@@ -200,24 +200,24 @@ export default function LibraryHeaderActions({ library, onTitleChange }) {
                                 </Button>
                             </>
                         ) : (
-                            <div className="flex gap-2 w-full items-center">
+                            <div className="flex-col md:flex gap-2 w-full items-center">
                                 <input
                                     type="text"
                                     value={title}
                                     onChange={(e) => setTitle(e.target.value)}
-                                    className="border border-theme rounded px-1 py-0.5 text-xs flex-1"
+                                    className="border border-theme rounded px-1 py-0.5 text-[17px] md:text-xs flex-1"
                                     autoFocus
                                 />
-                                <div className="flex gap-2 items-center">
-                                    <Button
+                                <div className="flex ml-1 md:ml-0 mt-2 md:mt-0 gap-2 items-center">
+                                    <button
                                         variant="ghost"
                                         size="8"
                                         onClick={handleSaveTitle}
                                         title="Save"
                                     >
-                                        <Check className="w-4 h-4 text-green-500" />
-                                    </Button>
-                                    <Button
+                                        <Check className="w-5 h-5 md:w-4 md:h-4 text-green-500" />
+                                    </button>
+                                    <button
                                         variant="ghost"
                                         size="8"
                                         onClick={() => {
@@ -226,8 +226,8 @@ export default function LibraryHeaderActions({ library, onTitleChange }) {
                                         }}
                                         title="Cancel"
                                     >
-                                        <X className="w-4 h-4 text-red-500" />
-                                    </Button>
+                                        <X className="w-5 h-5 md:w-4 md:h-4 text-red-500" />
+                                    </button>
                                 </div>
                             </div>
                         )}
@@ -240,33 +240,34 @@ export default function LibraryHeaderActions({ library, onTitleChange }) {
                     <div id="export-content" className="hidden">
                         <LibraryExportHTML library={library} />
                     </div>
+
                     {/* Your export button */}
-                    <Button
+                    <button
                         variant="ghost"
-                        className="!pl-1 w-full h-7 justify-start gap-2 text-xs text-dark hover:bg-secondary"
+                        className="!pl-1 w-full h-7 justify-start gap-2 text-[17px] md:text-xs text-dark hover:bg-secondary flex items-center"
                         onClick={handleExportPDF}
                     >
-                        <FileText style={{ scale: 0.85 }} className="text-accent" /> Export as PDF
-                    </Button>
+                        <FileText className="h-5 w-5 md:h-4 md:w-4 text-accent" /> Export as PDF
+                    </button>
 
-                    <Button
+                    <button
                         variant="ghost"
-                        className="!pl-1 w-full h-7 justify-start gap-2 text-xs text-dark hover:bg-secondary"
+                        className="!pl-1 w-full h-7 justify-start gap-2 text-[17px] md:text-xs text-dark hover:bg-secondary flex items-center"
                         onClick={handleExportMarkdown}
                     >
-                        <FileDown style={{ scale: 0.85 }} className="text-accent" /> Export as Markdown
-                    </Button>
+                        <FileDown className="h-5 w-5 md:h-4 md:w-4 text-accent" /> Export as Markdown
+                    </button>
 
                     <hr className="my-2 border-theme" />
 
                     {/* Danger item */}
-                    <Button
+                    <button
                         variant="ghost"
-                        className="!pl-1 w-full h-7 justify-start gap-2 text-xs text-red-500 hover:text-red-600 hover:bg-secondary"
+                        className="!pl-1 w-full h-7 justify-start gap-2 text-[17px] md:text-xs text-red-500 hover:text-red-600 hover:bg-secondary flex items-center"
                         onClick={handleDeleteLibrary}
                     >
-                        <Trash2 style={{ scale: 0.85 }} className="w-4 h-4" /> Delete
-                    </Button>
+                        <Trash2 className="h-5 w-5 md:h-4 md:w-4" /> Delete
+                    </button>
 
                 </PopoverContent>
             </Popover>

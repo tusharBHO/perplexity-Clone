@@ -19,12 +19,12 @@ export default function Preferences() {
     const { aiModel, setAiModel } = useAiModel();
 
     return (
-        <div className="w-full h-full px-4 sm:px-6 md:px-8 ">
+        <div className="w-full h-[calc(100vh-52px)] px-4 sm:px-6 md:px-8 ">
             {/* Appearance Section */}
             <section className="mb-10">
                 <h1 className="text-lg font-semibold text-dark">Preferences</h1>
                 <div className="border-t border-theme my-4"></div>
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <div className="flex flex-row items-center justify-between gap-2">
                     <div>
                         <p className="text-dark text-sm">Appearance</p>
                         <p className="text-muted text-xs">
@@ -51,7 +51,7 @@ export default function Preferences() {
 
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
-                            <button className="text-xs text-muted border border-theme rounded-sm px-3 py-1 hover:bg-secondary w-fit transition-colors bg-pHover-hover">
+                            <button className="text-sm md:text-xs text-muted border border-theme rounded-sm px-3 py-1 hover:bg-secondary w-fit transition-colors bg-pHover-hover">
                                 {aiModel ? aiModel : "Choose here"}
                             </button>
                         </DropdownMenuTrigger>
@@ -63,7 +63,7 @@ export default function Preferences() {
                                     <DropdownMenuItem
                                         key={model.id}
                                         onClick={() => setAiModel(model.name)}
-                                        className={`flex flex-col gap-1 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-200 ${isSelected
+                                        className={`flex flex-col justify-start gap-1 py-2 px-3 rounded-lg cursor-pointer transition-colors duration-200 ${isSelected
                                             ? "bg-accent text-white"
                                             : "hover:bg-accent hover:text-dark text-muted"
                                             }`}
@@ -73,7 +73,7 @@ export default function Preferences() {
                                             {isSelected && <span className="text-xs">✔</span>}
                                         </div>
                                         {model.desc && (
-                                            <p className="text-xs text-muted">{model.desc}</p>
+                                            <p className="text-xs text-muted w-full justify-start">{model.desc}</p>
                                         )}
                                     </DropdownMenuItem>
                                 );

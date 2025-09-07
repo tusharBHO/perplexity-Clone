@@ -62,7 +62,8 @@ export default function AccountInfo() {
     if (!user) return <p className="text-muted">Loading...</p>;
 
     return (
-        <div className="w-full h-full px-4 sm:px-6 md:px-10">
+        // <div className="w-full h-full px-4 sm:px-6 md:px-10">
+        <div className="w-full h-[calc(100vh-52px)] px-4 sm:px-6 md:px-10 overflow-y-scroll">
             {/* Account Section */}
             <section className="mb-10">
                 <h1 className="text-lg font-semibold text-dark">Account</h1>
@@ -130,7 +131,7 @@ export default function AccountInfo() {
                 <h2 className="text-lg text-dark font-semibold">System</h2>
                 <div className="border-t border-theme my-4"></div>
 
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-5 md:mb-3 gap-2">
                     <p className="text-sm text-dark">Support</p>
                     <button
                         onClick={() => router.push("/contact")}
@@ -140,13 +141,13 @@ export default function AccountInfo() {
                     </button>
                 </div>
 
-                <div className="mb-3">
+                <div className="mb-4 md:mb-3">
                     <p className="text-sm text-muted">
                         You are signed in as <span className="font-semibold text-dark">{user.primaryEmailAddress?.emailAddress}</span>
                     </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-5 md:mb-3 gap-2">
                     <p className="text-sm text-dark">Sign out</p>
                     <button
                         onClick={handleSignOut}
@@ -156,7 +157,7 @@ export default function AccountInfo() {
                     </button>
                 </div>
 
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-5 md:mb-3 gap-2">
                     <div>
                         <p className="text-sm text-dark">Sign out of all sessions</p>
                         <p className="text-xs text-muted">Devices or browsers where you are signed in</p>

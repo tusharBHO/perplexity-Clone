@@ -3,7 +3,8 @@ import { SignIn } from "@clerk/nextjs";
 
 export default function SignInPage() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50">
+    // <div className="flex items-center justify-center min-h-screen bg-gray-50">
+    <div className="flex items-center justify-center min-h-screen bg-primary">
       <SignIn
         path="/sign-in"
         routing="path"
@@ -14,6 +15,7 @@ export default function SignInPage() {
             footer: "hidden",
           },
         }}
+        className={'bg-primary'}
       />
     </div>
   );

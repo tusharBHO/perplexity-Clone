@@ -27,7 +27,7 @@ function DisplayResult({ searchInputRecord }) {
     const { libId } = useParams();
     const [loadingSearch, setLoadingSearch] = useState(false);
     const [userInput, setUserInput] = useState();
-    const { aiModel } = useAiModel('');
+    const { aiModel } = useAiModel('');supabase
     const [library, setLibrary] = useState(buildLibrary(searchInputRecord));
     const scrollRef = useRef();
 
@@ -48,86 +48,86 @@ function DisplayResult({ searchInputRecord }) {
         setLibrary(buildLibrary(searchResult));
     }, [searchResult]);
 
-    // const GetSearchApiResult = async () => {
-    //     setLoadingSearch(true);
-    //     const result = await axios.post('/api/brave-search-api', {
-    //         searchInput: userInput ?? searchInputRecord?.searchInput,
-    //         searchType: searchInputRecord?.type ?? 'Search',
-    //         count: 10
-    //     });
-
-    //     const searchResp = result.data;
-    //     const formattedSearchResp = searchResp?.web?.results?.map((item) => ({
-    //         title: item?.title,
-    //         description: item?.description,
-    //         long_name: item?.profile?.long_name,
-    //         img: item?.profile?.img,
-    //         url: item?.url,
-    //         thumbnail: item?.thumbnail?.src
-    //     }));
-
-    //     const { data } = await supabase
-    //         .from('Chats')
-    //         .insert([{
-    //             libId,
-    //             searchResult: formattedSearchResp,
-    //             userSearchInput: userInput ?? searchInputRecord?.searchInput
-    //         }])
-    //         .select();
-
-    //     await GetSearchRecords();
-    //     setLoadingSearch(false);
-    //     setUserInput('')
-    //     await GenerateAIResp(formattedSearchResp, data[0].id);
-    // };
     const GetSearchApiResult = async () => {
         setLoadingSearch(true);
+        const result = await axios.post('/api/brave-search-api', {
+            searchInput: userInput ?? searchInputRecord?.searchInput,
+            searchType: searchInputRecord?.type ?? 'Search',
+            count: 10
+        });
 
-        try {
-            const result = await axios.post("/api/brave-search-api", {
-                searchInput: userInput ?? searchInputRecord?.searchInput,
-                searchType: searchInputRecord?.type ?? "Search",
-                count: 10,
-            });
+        const searchResp = result.data;
+        const formattedSearchResp = searchResp?.web?.results?.map((item) => ({
+            title: item?.title,
+            description: item?.description,
+            long_name: item?.profile?.long_name,
+            img: item?.profile?.img,
+            url: item?.url,
+            thumbnail: item?.thumbnail?.src
+        }));
 
-            const searchResp = result.data;
+        const { data } = await supabase
+            .from('Chats')
+            .insert([{
+                libId,
+                searchResult: formattedSearchResp,
+                userSearchInput: userInput ?? searchInputRecord?.searchInput
+            }])
+            .select();
 
-            const formattedSearchResp = searchResp?.web?.results?.map((item) => ({
-                title: item?.title,
-                description: item?.description,
-                long_name: item?.profile?.long_name,
-                img: item?.profile?.img,
-                url: item?.url,
-                thumbnail: item?.thumbnail?.src,
-            }));
-
-            // Save in Supabase
-            await supabase
-                .from("Chats")
-                .insert([
-                    {
-                        libId,
-                        searchResult: formattedSearchResp,
-                        userSearchInput: userInput ?? searchInputRecord?.searchInput,
-                    },
-                ])
-                .select();
-
-            await GetSearchRecords();
-            setUserInput("");
-        } catch (err) {
-            if (err.response?.status === 429) {
-                console.warn("Brave API rate limit hit");
-                alert("⚠️ You’ve hit the Brave API rate limit. Please wait and try again.");
-            } else {
-                console.error("Search API error:", err);
-                alert("Something went wrong while fetching search results.");
-            }
-        } finally {
-            // Always stop loader
-            setLoadingSearch(false);
-        }
+        await GetSearchRecords();
+        setLoadingSearch(false);
+        setUserInput('')
+        await GenerateAIResp(formattedSearchResp, data[0].id);
     };
+    // const GetSearchApiResult = async () => {
+    //     setLoadingSearch(true);
+
+    //     try {
+    //         const result = await axios.post("/api/brave-search-api", {
+    //             searchInput: userInput ?? searchInputRecord?.searchInput,
+    //             searchType: searchInputRecord?.type ?? "Search",
+    //             count: 10,
+    //         });
+
+    //         const searchResp = result.data;
+
+    //         const formattedSearchResp = searchResp?.web?.results?.map((item) => ({
+    //             title: item?.title,
+    //             description: item?.description,
+    //             long_name: item?.profile?.long_name,
+    //             img: item?.profile?.img,
+    //             url: item?.url,
+    //             thumbnail: item?.thumbnail?.src,
+    //         }));
+
+    //         // Save in Supabase
+    //         await supabase
+    //             .from("Chats")
+    //             .insert([
+    //                 {
+    //                     libId,
+    //                     searchResult: formattedSearchResp,
+    //                     userSearchInput: userInput ?? searchInputRecord?.searchInput,
+    //                 },
+    //             ])
+    //             .select();
+
+    //         await GetSearchRecords();
+    //         setUserInput("");
+    //     } catch (err) {
+    //         if (err.response?.status === 429) {
+    //             console.warn("Brave API rate limit hit");
+    //             alert("⚠️ You’ve hit the Brave API rate limit. Please wait and try again.");
+    //         } else {
+    //             console.error("Search API error:", err);
+    //             alert("Something went wrong while fetching search results.");
+    //         }
+    //     } finally {
+    //         // Always stop loader
+    //         setLoadingSearch(false);
+    //     }
+    // };
 
 
     const GenerateAIResp = async (formattedSearchResp, recordId) => {
@@ -193,7 +193,7 @@ function DisplayResult({ searchInputRecord }) {
     return (
         <div className="relative pb-10 flex flex-col items-center">
             {/* top-right buttons */}
-            <div className="fixed text-center flex items-center justify-center gap-2 right-5 top-2 md:right-10">
+            <div className="fixed text-center z-30 flex items-center justify-center gap-2 right-2 top-2 md:right-5">
                 {/* <LibraryHeaderActions library={library} /> */}
                 <LibraryHeaderActions
                     library={library}
@@ -202,7 +202,7 @@ function DisplayResult({ searchInputRecord }) {
             </div>
 
             {searchResult?.Chats?.map((chat, index) => (
-                <div key={index} className="mt-7">
+                <div key={index} className="pt-10">
                     <h2 className="font-semibold text-4xl text-dark">{chat?.userSearchInput}</h2>
 
                     {/* tabs */}
@@ -211,9 +211,9 @@ function DisplayResult({ searchInputRecord }) {
                             <button
                                 key={label}
                                 onClick={() => setActiveTab(label)}
-                                className={`flex items-center gap-1 relative text-sm font-medium text-muted hover:text-dark ${activeTab === label ? "text-dark" : ""}`}
+                                className={`flex items-center gap-1 relative text-[17px] md:text-sm font-medium text-muted hover:text-dark ${activeTab === label ? "text-dark" : ""}`}
                             >
-                                <Icon className="w-4 h-4" />
+                                <Icon className="h-5 w-5 md:w-4 md:h-4" />
                                 <span>{label}</span>
                                 {badge && (
                                     <span className="ml-1 text-xs bg-secondary text-muted px-1.5 py-0.5 rounded">
@@ -271,7 +271,7 @@ function DisplayResult({ searchInputRecord }) {
                     <Button
                         onClick={GetSearchApiResult}
                         disabled={loadingSearch}
-                        className="ml-2 flex-shrink-0 bg-accent h-7 w-7"
+                        className="ml-2 flex-shrink-0 bg-accent h-8 w-8 md:h-7 md:w-7"
                     >
                         {loadingSearch ? (
                             <Loader2Icon className="text-white animate-spin" />

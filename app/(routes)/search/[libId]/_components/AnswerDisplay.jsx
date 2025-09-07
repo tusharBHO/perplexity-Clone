@@ -78,9 +78,9 @@ function AnswerDisplay({ chat, loadingSearch, onDeleteChat, isDeletable }) {
               variant="outline"
               // size="sm"
               // className="flex items-center gap-2 rounded-lg text-xs"
-              className="bg-sHover-hover inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-xs bg-secondary text-muted01 hover:text-dark transition-colors relative bottom-10"
+              className="bg-sHover-hover inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-sm bg-secondary text-muted01 hover:text-dark transition-colors relative bottom-10"
             > 
-              <Download className="w-3 h-3" />
+              <Download className="w-4 h-4 md:w-3 md:h-3" />
               Export
             </button>
           </PopoverTrigger>
@@ -88,22 +88,22 @@ function AnswerDisplay({ chat, loadingSearch, onDeleteChat, isDeletable }) {
           <PopoverContent
             align="end"
             sideOffset={6}
-            className="w-40 p-2 rounded-xl shadow-lg border border-theme bg-primary text-muted01"
+            className="w-44 py-2 px-1 rounded-lg shadow-lg border border-theme bg-primary text-muted01"
           >
             <button
               variant="ghost"
-              className="bg-sHover-hover !pl-1 w-full h-6 justify-start gap-2 text-xs text-muted01 flex items-center"
+              className="bg-sHover-hover !pl-1 w-full h-6 justify-start gap-2 text-sm text-muted01 flex items-center"
               onClick={handleExportPDF}
             >
-              <FileText className="w-3 h-3 text-accent" /> Export as PDF
+              <FileText className="w-4 h-4 md:w-3 md:h-3 text-accent" /> Export as PDF
             </button>
 
             <button
               variant="ghost"
-              className="bg-sHover-hover !pl-1 w-full h-6 justify-start gap-2 text-xs text-muted01 flex items-center"
+              className="bg-sHover-hover !pl-1 w-full h-6 justify-start gap-2 text-sm text-muted01 flex items-center"
               onClick={handleExportMarkdown}
             >
-              <FileDown className="w-3 h-3 text-accent" /> Export as Markdown
+              <FileDown className="w-4 h-4 md:w-3 md:h-3 text-accent" /> Export as Markdown
             </button>
           </PopoverContent>
         </Popover>
