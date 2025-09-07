@@ -261,12 +261,12 @@ export default function AppSidebar() {
                                     {/* Library Items */}
                                     {menu.title === "Library" && (
                                         // <div className="w-full pr-1 h-[calc(100vh-390px)] overflow-y-scroll overflow-x-hidden">
-                                        <div className="w-full pr-1 h-[calc(100vh-400px)] overflow-y-scroll overflow-x-hidden">
+                                        <div className="w-full pr-1 mb-3 h-[calc(100vh-400px)] overflow-y-scroll overflow-x-hidden">
                                             {searchInputsArray.map((item, i) => (
                                                 <div
                                                     key={i}
                                                     className="ml-8 flex items-center justify-between gap-2 px-0 py-1 rounded-md 
-                            transition-all duration-200 cursor-pointer hover:bg-secondary mb-3"
+                            transition-all duration-200 cursor-pointer hover:bg-secondary"
                                                 >
                                                     <li
                                                         className="text-[17px] cursor-pointer list-none text-muted truncate"
