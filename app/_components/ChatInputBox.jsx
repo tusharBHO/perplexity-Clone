@@ -57,7 +57,7 @@ function ChatInputBox() {
     }
 
     return (
-        <div className="md:ml-14 h-screen w-full md:w-[calc(100%-3.5rem)] flex flex-col items-center justify-start pt-[25vh] bg-primary">
+        <div className="md:ml-14 h-[calc(100%-00px)] md:h-screen w-full md:w-[calc(100%-3.5rem)] flex flex-col items-center justify-start pt-[25vh] bg-primary">
             {/* Logo + Title */}
             <div className="flex items-center justify-center text-center gap-3 mb-8">
                 <Image
@@ -140,7 +140,7 @@ function ChatInputBox() {
                                 className={`px-2 py-1 transition-colors duration-300 ${searchType === 'Search'
                                     ? 'bg-accent text-white' : 'text-muted bg-pHover-hover'}`}
                             >
-                                <SearchCheck className="inline-block" />
+                                <SearchCheck className="inline-block !w-5 !h-5 md:!w-4 md:!h-4" />
                                 <span className="hidden sm:inline">Search</span>
                             </TabsTrigger>
 
@@ -149,7 +149,7 @@ function ChatInputBox() {
                                 className={`px-2 py-1 transition-colors duration-300 ${searchType === 'Research'
                                     ? 'bg-accent text-white' : 'text-muted bg-pHover-hover'}`}
                             >
-                                <Atom className="inline-block" />
+                                <Atom className="inline-block !w-5 !h-5 md:!w-4 md:!h-4" />
                                 <span className="hidden sm:inline">Research</span>
                             </TabsTrigger>
                         </div>
@@ -158,7 +158,7 @@ function ChatInputBox() {
                         <div className="flex items-center justify-center gap-1">
                             <DropdownMenu>
                                 <DropdownMenuTrigger aria-label="Select AI model">
-                                    <Cpu className="text-gray-500 bg-sHover-hover rounded-sm p-2 h-8 w-8 cursor-pointer transition-colors duration-300" />
+                                    <Cpu className="text-gray-500 bg-sHover-hover rounded-sm p-2 h-9 w-9 md:h-8 md:w-8 cursor-pointer transition-colors duration-300" />
                                 </DropdownMenuTrigger>
 
                                 <DropdownMenuContent className="w-56 bg-secondary border border-theme text-dark rounded-lg shadow-lg transition-colors duration-300">
@@ -182,13 +182,13 @@ function ChatInputBox() {
                                 </DropdownMenuContent>
                             </DropdownMenu>
 
-                            <FileUploadButton onFileSelect={(file) => console.log(file)} />
+                            {/* <FileUploadButton onFileSelect={(file) => console.log(file)} /> */}
                             <AudioRecorder onTranscriptChange={handleTranscriptChange} />
 
                             <Button
                                 onClick={() => { userSearchInput && onSearchQuery() }}
                                 disabled={loading}
-                                className="bg-accent hover:brightness-110 text-white h-7 w-7 p-0 flex items-center justify-center rounded-sm transition-all duration-300 flex-shrink-0"
+                                className="bg-accent hover:brightness-110 text-white h-7 w-7 p-0 ml-2 flex items-center justify-center rounded-sm transition-all duration-300 flex-shrink-0"
                             >
                                 {loading ? <Loader2Icon /> : <ArrowRight />}
                             </Button>

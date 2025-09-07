@@ -18,11 +18,11 @@ export default function CustomUserMenu() {
                         <img
                             src={user?.imageUrl}
                             alt="avatar"
-                            className="md:w-9 md:h-9 w-7 h-7 rounded-full border border-theme shadow bg-primary"
+                            className="w-9 h-9 md:w-9 md:h-9 rounded-full border border-theme shadow bg-primary"
                         />
                     ) : (
                         <div className="flex items-center justify-center rounded-full border border-theme shadow bg-secondary">
-                            <User className="md:w-7 md:h-7 w-5 h-5 text-muted" />
+                            <User className="w-7 h-7 md:w-9 md:h-9 text-muted" />
                         </div>
                     )}
                 </button>

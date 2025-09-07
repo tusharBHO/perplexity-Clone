@@ -215,16 +215,15 @@ export default function AppSidebar() {
 
             {/* Mobile Sidebar Drawer */}
             {isMobileOpen && (
-                <div className="md:hidden fixed top-0 left-0 flex flex-col h-screen max-h-[100vh] w-68 bg-secondary z-50 p-1 animate-[slideIn_0.3s_ease-out] border-r border-theme">
-                    <div className="flex items-center gap-2 text-dark">
-                        <button onClick={() => setIsMobileOpen(false)}>
+                <div className="md:hidden fixed top-0 left-0 flex flex-col h-screen max-h-[100vh] w-68 bg-secondary z-50 px-1 animate-[slideIn_0.3s_ease-out] border-r border-theme">
+                    <div>
+                        <button onClick={() => setIsMobileOpen(false)} className="flex items-center gap-2 text-dark">
                             {/* <X className="h-5 w-5 text-dark" /> */}
-                            <ArrowLeft className="h-5 w-5 text-dark" />
+                            <ArrowLeft className="h-5 w-5 text-dark" />Back
                         </button>
-                        <span>Back</span>
                     </div>
 
-                    <nav className="flex flex-col h-full gap-4">
+                    <nav className="flex flex-col h-full gap-3">
                         {MenuOptions.map((menu, idx) => {
                             const isActiveRoute = menu.path === "/"
                                 ? path === "/"
@@ -261,7 +260,8 @@ export default function AppSidebar() {
 
                                     {/* Library Items */}
                                     {menu.title === "Library" && (
-                                        <div className="w-full pr-1 h-[calc(100vh-390px)] overflow-y-scroll overflow-x-hidden">
+                                        // <div className="w-full pr-1 h-[calc(100vh-390px)] overflow-y-scroll overflow-x-hidden">
+                                        <div className="w-full pr-1 h-[calc(100vh-420px)] overflow-y-scroll overflow-x-hidden">
                                             {searchInputsArray.map((item, i) => (
                                                 <div
                                                     key={i}
@@ -288,12 +288,15 @@ export default function AppSidebar() {
                                 </div>
                             );
                         })}
-
+                        <div className="h-[50px] w-full px-0 flex items-center justify-start gap-2">
+                            <CustomUserMenu />
+                            <p className="font-medium text-dark text-lg">{user?.fullName}</p>
+                        </div>
                     </nav>
 
-                    <div className="fixed bottom-1 sm:bottom-2">
+                    {/* <div className="fixed -bottom-1 sm:bottom-2">
                         <CustomUserMenu />
-                    </div>
+                    </div> */}
                 </div>
             )}
 
