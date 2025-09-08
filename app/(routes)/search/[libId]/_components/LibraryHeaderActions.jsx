@@ -17,7 +17,8 @@ import {
 import LibraryExportHTML from "./LibraryExportHTML";
 
 import { Edit2, Check, X } from "lucide-react"; // icons for edit/save/cancel
-import { supabase } from '@/services/supabase';
+// import { supabase } from '@/services/supabase';
+import { supabase } from '../../../../../services/supabase';
 import { useRouter } from "next/navigation";
 import { useToast } from "../../../../../context/ToastContext";
 
