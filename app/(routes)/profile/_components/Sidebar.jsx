@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-import ThemeToggle from "@/app/_components/ThemeToggle";
+// import ThemeToggle from "../../../_components/ThemeToggle";
 
 export default function Sidebar({ onClose }) {
     const pathname = usePathname();
@@ -15,7 +15,7 @@ export default function Sidebar({ onClose }) {
     ];
 
     return (
-        <aside className="w-68 h-full border-theme border-r sm:px-4 sm:py-6 bg-primary">
+        <aside className="w-68 h-full border-theme border-r px-2 sm:px-4 sm:py-6 bg-primary">
             {/* Back button */}
             <button
                 onClick={() => {

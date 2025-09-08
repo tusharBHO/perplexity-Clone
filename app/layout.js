@@ -11,6 +11,8 @@ import { SearchCategoryProvider } from "../context/searchCategoryContext";
 import { AiModelProvider } from "../context/aiModelContext";
 import { usePathname } from "next/navigation";
 import { ThemeProvider } from "../context/ThemeContext"; // 👈 import it
+import { ToastProvider } from "../context/ToastContext";
+// import RootWrapper from './_components/RootWrapper';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,21 +31,47 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
+        {/* <head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `   
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  if (!theme) {
+                    var mql = window.matchMedia('(prefers-color-scheme: dark)');
+                    theme = mql.matches ? 'dark' : 'light';
+                  }
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `
+            }}
+          />
+        </head> */}
         <body
         >
           <ThemeProvider>   {/* 👈 wrap here */}
-            <SidebarProvider>
-              <SearchTypeProvider>
-                <SearchCategoryProvider>
-                  <AiModelProvider>
-                    {!hideSidebar && <AppSidebar />}
-                    <Provider>
-                      {children}
-                    </Provider>
-                  </AiModelProvider>
-                </SearchCategoryProvider>
-              </SearchTypeProvider>
-            </SidebarProvider>
+            {/* <RootWrapper> Wrap here */}
+              <ToastProvider> {/* Toast context inside ThemeProvider */}
+                <SidebarProvider>
+                  <SearchTypeProvider>
+                    <SearchCategoryProvider>
+                      <AiModelProvider>
+                        {!hideSidebar && <AppSidebar />}
+                        <Provider>
+                          {children}
+                        </Provider>
+                      </AiModelProvider>
+                    </SearchCategoryProvider>
+                  </SearchTypeProvider>
+                </SidebarProvider>
+              </ToastProvider>
+            {/* </RootWrapper> */}
           </ThemeProvider>
         </body>
       </html>

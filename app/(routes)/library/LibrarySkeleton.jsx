@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 
-export default function LibrarySkeleton({ items = 5 }) {
+export default function LibrarySkeleton({ items = 6 }) {
     return (
         <div className="mt-5 space-y-4">
             {Array.from({ length: items }).map((_, index) => (

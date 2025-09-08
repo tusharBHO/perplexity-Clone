@@ -201,6 +201,7 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                                 tr: ({ node, ...props }) => (
                                     <tr className="even:bg-secondary/40 hover:bg-secondary/60 transition-colors" {...props} />
                                 ),
+
                                 code: ({ node, inline, className, children, ...props }) => {
                                     const match = /language-(\w+)/.exec(className || "");
                                     const [copied, setCopied] = useState(false);

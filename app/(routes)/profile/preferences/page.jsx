@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import ThemeToggle from "@/app/_components/ThemeToggle";
+import ThemeToggle from "../../../_components/ThemeToggle";
 import {
     DropdownMenu,
     DropdownMenuTrigger,
     DropdownMenuContent,
     DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
+} from "../../../../components/ui/dropdown-menu";
 import { useAiModel } from "../../../../context/aiModelContext";
 
 const AIModelsOption = [

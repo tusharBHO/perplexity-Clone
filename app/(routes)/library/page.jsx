@@ -50,7 +50,7 @@ function Library() {
 
             <div className="mt-5 h-[77vh] overflow-y-scroll">
                 {isLoading ? (
-                    <LibrarySkeleton items={5} />  // ✅ Show skeleton while loading
+                    <LibrarySkeleton items={6} />  // ✅ Show skeleton while loading
                 ) : libraryHistory.length > 0 ? (
                     libraryHistory.map((item, index) => (
                         <div

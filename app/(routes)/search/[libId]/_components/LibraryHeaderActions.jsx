@@ -19,13 +19,14 @@ import LibraryExportHTML from "./LibraryExportHTML";
 import { Edit2, Check, X } from "lucide-react"; // icons for edit/save/cancel
 import { supabase } from '@/services/supabase';
 import { useRouter } from "next/navigation";
+import { useToast } from "../../../../../context/ToastContext";
 
 export default function LibraryHeaderActions({ library, onTitleChange }) {
     const [copied, setCopied] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [title, setTitle] = useState(library?.title || "My bad");
     const router = useRouter();
-
+    const { showToast } = useToast();
 
     useEffect(() => {
         setTitle(library?.title || "My Library");
@@ -58,14 +59,12 @@ export default function LibraryHeaderActions({ library, onTitleChange }) {
             if (error) throw error;
 
             setIsEditing(false);
+            showToast('✅ Title updated successfully!');
 
-            // Optional: update parent state if needed
-            // If you pass a callback from parent, call it here:
             onTitleChange?.(title);
-
         } catch (err) {
             console.error('Failed to update title', err.message);
-            alert('Failed to update title.');
+            showToast('❌ Failed to update title.');
         }
     };
 
@@ -146,12 +145,10 @@ export default function LibraryHeaderActions({ library, onTitleChange }) {
             if (error) throw error;
 
             router.push("/"); // redirect to search page
-            alert('Library deleted successfully!');
-            // optional: redirect or clear state
-            // e.g., navigate("/search") if using Next.js router
+            showToast('Library deleted successfully!');
         } catch (err) {
             console.error('Failed to delete library', err.message);
-            alert('Failed to delete library.');
+            showToast('Failed to delete library.');
         }
     };
 

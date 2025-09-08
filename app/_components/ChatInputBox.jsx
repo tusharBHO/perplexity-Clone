@@ -74,7 +74,8 @@ function ChatInputBox() {
             </div>
 
             {/* Search Box */}
-            <div className="p-2 w-[90vw] sm:w-[70vw] md:w-[60vw] lg:w-[50vw] border border-theme rounded-2xl bg-primary shadow-md transition-colors duration-300">
+            {/* <div className="p-2 w-[90vw] sm:w-[70vw] md:w-[60vw] lg:w-[50vw] border border-theme rounded-2xl bg-primary shadow-md transition-colors duration-300"> */}
+            <div className="p-2 w-[90vw] sm:w-[70vw] md:w-[60vw] lg:w-[50vw] border border-theme rounded-2xl bg-primary shadow-md">
                 <Tabs value={searchType} onValueChange={setSearchType} className="w-full">
 
                     {/* Search Tab */}

@@ -27,7 +27,7 @@ function DisplayResult({ searchInputRecord }) {
     const { libId } = useParams();
     const [loadingSearch, setLoadingSearch] = useState(false);
     const [userInput, setUserInput] = useState();
-    const { aiModel } = useAiModel('');supabase
+    const { aiModel } = useAiModel(''); supabase
     const [library, setLibrary] = useState(buildLibrary(searchInputRecord));
     const scrollRef = useRef();
 
@@ -202,7 +202,9 @@ function DisplayResult({ searchInputRecord }) {
             </div>
 
             {searchResult?.Chats?.map((chat, index) => (
-                <div key={index} className="pt-10">
+                // <div key={index} className="pt-10">
+                // <div key={index} className="pt-10 w-[90vw] sm:w-[80vw] md:w-[60vw]">
+                <div key={index} className="pt-10 w-[90vw] sm:w-[88vw] md:w-[63vw]">
                     <h2 className="font-semibold text-4xl text-dark">{chat?.userSearchInput}</h2>
 
                     {/* tabs */}
@@ -238,13 +240,13 @@ function DisplayResult({ searchInputRecord }) {
                             <SourceListTab chat={chat} loadingSearch={loadingSearch} />
                         ) : null}
                     </div>
-                    <hr className="my-5 border-theme" />
+                    <hr className="border-theme" />
                 </div>
             ))}
 
             <ScrollToBottomButton />
 
-            <div className="bg-secondary border border-theme rounded-lg shadow-md p-1 px-3 flex justify-between items-center fixed bottom-5 w-[88vw] sm:w-[88vw] md:w-[63vw]">
+            <div className="bg-secondary border border-theme rounded-lg shadow-md p-1 px-3 flex justify-between items-center fixed bottom-5 w-[90vw] sm:w-[88vw] md:w-[63vw]">
                 <textarea
                     placeholder="Type Anything..."
                     value={userInput}

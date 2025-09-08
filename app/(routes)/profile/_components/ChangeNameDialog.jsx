@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
+import { useToast } from "../../../../context/ToastContext"
 
 export default function ChangeNameDialog({ open, setOpen }) {
   const { user } = useUser();
   const [fullName, setFullName] = useState(user?.fullName || "");
   const [loading, setLoading] = useState(false);
-
+  const { showToast } = useToast();
   if (!open) return null; // don't render if dialog is closed
 
   const handleSave = async () => {
@@ -18,8 +19,9 @@ export default function ChangeNameDialog({ open, setOpen }) {
       await user.update({ firstName, lastName });
       await user.reload(); // refresh user data
       setOpen(false);
+      showToast("Name updated successfully!")
     } catch (err) {
-      alert("Failed to update name");
+      showToast("Failed to update name");
       console.error(err);
     } finally {
       setLoading(false);
