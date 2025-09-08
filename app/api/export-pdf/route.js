@@ -1,24 +1,41 @@
-import chromium from '@sparticuz/chromium';
-import puppeteer from 'puppeteer-core';
+import puppeteer from "puppeteer-core";
+import chromium from "@sparticuz/chromium";
 
-export const runtime = 'nodejs'; // Use Node.js runtime
+export const runtime = "nodejs";
 
 export async function POST(req) {
+    let browser = null;
+
     try {
         const { html } = await req.json();
-        // Launch browser with the serverless Chromium
-        const browser = await puppeteer.launch({
-            args: chromium.args,
+
+        const executablePath =
+            process.env.NODE_ENV === "production"
+                ? await chromium.executablePath() // on Vercel
+                : "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"; // path for local Windows - adjust if needed
+
+        browser = await puppeteer.launch({
+            args: process.env.NODE_ENV === "production"
+                ? chromium.args
+                : [
+                    "--no-sandbox",
+                    "--disable-setuid-sandbox",
+                    "--disable-dev-shm-usage",
+                    "--disable-gpu",
+                    "--single-process",
+                    "--no-zygote",
+                ],
             defaultViewport: chromium.defaultViewport,
-            executablePath: await chromium.executablePath(),
-            headless: chromium.headless,
+            executablePath,
+            headless: true,
             ignoreHTTPSErrors: true,
         });
+
         const page = await browser.newPage();
-        await page.setContent(html, { waitUntil: 'networkidle0' });
+        await page.setContent(html, { waitUntil: "networkidle0" });
 
         const pdfBuffer = await page.pdf({
-            format: 'A4',
+            format: "A4",
             printBackground: true,
             margin: { top: 60, bottom: 60 },
         });
@@ -28,17 +45,74 @@ export async function POST(req) {
         return new Response(pdfBuffer, {
             status: 200,
             headers: {
-                'Content-Type': 'application/pdf',
-                'Content-Disposition': 'attachment; filename="file.pdf"',
+                "Content-Type": "application/pdf",
+                "Content-Disposition": 'attachment; filename="file.pdf"',
             },
         });
     } catch (err) {
-        return new Response(JSON.stringify({ error: err.message }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' },
-        });
+        if (browser) await browser.close();
+
+        return new Response(
+            JSON.stringify({ error: err.message || "Unknown error generating PDF" }),
+            {
+                status: 500,
+                headers: { "Content-Type": "application/json" },
+            }
+        );
     }
 }
+
+
+
+
+
+
+
+
+
+
+// // // app/api/export-pdf/route.js
+// import chromium from '@sparticuz/chromium';
+// import puppeteer from 'puppeteer-core';
+
+// export const runtime = 'nodejs'; // Use Node.js runtime
+
+// export async function POST(req) {
+//     try {
+//         const { html } = await req.json();
+//         // Launch browser with the serverless Chromium
+//         const browser = await puppeteer.launch({
+//             args: chromium.args,
+//             defaultViewport: chromium.defaultViewport,
+//             executablePath: await chromium.executablePath(),
+//             headless: chromium.headless,
+//             ignoreHTTPSErrors: true,
+//         });
+//         const page = await browser.newPage();
+//         await page.setContent(html, { waitUntil: 'networkidle0' });
+
+//         const pdfBuffer = await page.pdf({
+//             format: 'A4',
+//             printBackground: true,
+//             margin: { top: 60, bottom: 60 },
+//         });
+
+//         await browser.close();
+
+//         return new Response(pdfBuffer, {
+//             status: 200,
+//             headers: {
+//                 'Content-Type': 'application/pdf',
+//                 'Content-Disposition': 'attachment; filename="file.pdf"',
+//             },
+//         });
+//     } catch (err) {
+//         return new Response(JSON.stringify({ error: err.message }), {
+//             status: 500,
+//             headers: { 'Content-Type': 'application/json' },
+//         });
+//     }
+// }
 
 
 
