@@ -1,7 +1,7 @@
 "use client";
 import { useUser, useClerk } from "@clerk/nextjs";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
+import { Popover, PopoverTrigger, PopoverContent } from "../../components/ui/popover";
+import { Button } from "../../components/ui/button";
 import { LogOut, Settings, User, Sliders, LogIn, UserPlus } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";

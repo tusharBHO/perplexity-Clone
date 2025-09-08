@@ -7,7 +7,7 @@ import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 import { Copy, ThumbsUp, ThumbsDown, Trash2 } from "lucide-react";
 import ResourceCard from "./ResourceCard"; // adjust path if needed
-import { supabase } from "@/services/supabase";
+import { supabase } from "../../../../../services/supabase";
 
 export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDeletable }) {
     const responseRef = useRef(null);

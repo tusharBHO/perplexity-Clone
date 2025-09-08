@@ -10,7 +10,7 @@ import ImageListTab from "./ImageListTab";
 import SourceListTab from "./SourceListTab";
 import { Button } from "../../../../../components/ui/button";
 import { useAiModel } from "../../../../../context/aiModelContext";
-import AudioRecorder from "@/app/_components/AudioRecorder";
+import AudioRecorder from "../../../../_components/AudioRecorder";
 import LibraryHeaderActions from "./LibraryHeaderActions";
 import ScrollToBottomButton from "./ScrollToBottomButton";
 import { useRef } from "react";

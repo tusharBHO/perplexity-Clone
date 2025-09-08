@@ -4,8 +4,8 @@ import SourceList from "./SourceList";
 import DisplaySummary from "./DisplaySummary";
 import ChatExportHTML from "./ChatExportHTML";
 import { FileText, FileDown, Download } from "lucide-react";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
+import { Popover, PopoverTrigger, PopoverContent } from "../../../../../components/ui/popover";
+import { Button } from "../../../../../components/ui/button";
 
 function AnswerDisplay({ chat, loadingSearch, onDeleteChat, isDeletable }) {
   // PDF export

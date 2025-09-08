@@ -1,8 +1,8 @@
 // app/api/(routes)/search/[libId]/_components/LibraryHeaderActions.jsx
 "use client";
 import { useState, useEffect } from "react";
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
+import { Popover, PopoverTrigger, PopoverContent } from "../../../../../components/ui/popover";
+import { Button } from "../../../../../components/ui/button";
 import {
     EllipsisVertical,
     Plus,
