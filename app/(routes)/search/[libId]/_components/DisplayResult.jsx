@@ -14,6 +14,7 @@ import AudioRecorder from "../../../../_components/AudioRecorder";
 import LibraryHeaderActions from "./LibraryHeaderActions";
 import ScrollToBottomButton from "./ScrollToBottomButton";
 import { useRef } from "react";
+import { useToast } from "../../../../../context/ToastContext";
 
 const tabs = [
     { label: 'Answer', icon: LucideSparkles },
@@ -30,6 +31,7 @@ function DisplayResult({ searchInputRecord }) {
     const { aiModel } = useAiModel(''); supabase
     const [library, setLibrary] = useState(buildLibrary(searchInputRecord));
     const scrollRef = useRef();
+    const { showToast } = useToast();
 
     const handleTranscriptChange = (transcript) => {
         setUserInput((prev) => (prev ? prev + " " + transcript : transcript));
@@ -48,86 +50,86 @@ function DisplayResult({ searchInputRecord }) {
         setLibrary(buildLibrary(searchResult));
     }, [searchResult]);
 
+
     const GetSearchApiResult = async () => {
         setLoadingSearch(true);
-        const result = await axios.post('/api/brave-search-api', {
-            searchInput: userInput ?? searchInputRecord?.searchInput,
-            searchType: searchInputRecord?.type ?? 'Search',
-            count: 10
-        });
 
-        const searchResp = result.data;
-        const formattedSearchResp = searchResp?.web?.results?.map((item) => ({
-            title: item?.title,
-            description: item?.description,
-            long_name: item?.profile?.long_name,
-            img: item?.profile?.img,
-            url: item?.url,
-            thumbnail: item?.thumbnail?.src
-        }));
+        try {
+            const result = await axios.post('/api/brave-search-api', {
+                searchInput: userInput ?? searchInputRecord?.searchInput,
+                searchType: searchInputRecord?.type ?? 'Search',
+                count: 10
+            });
 
-        const { data } = await supabase
-            .from('Chats')
-            .insert([{
-                libId,
-                searchResult: formattedSearchResp,
-                userSearchInput: userInput ?? searchInputRecord?.searchInput
-            }])
-            .select();
+            const searchResp = result.data;
+            const formattedSearchResp = searchResp?.web?.results?.map((item) => ({
+                title: item?.title,
+                description: item?.description,
+                long_name: item?.profile?.long_name,
+                img: item?.profile?.img,
+                url: item?.url,
+                thumbnail: item?.thumbnail?.src
+            }));
 
-        await GetSearchRecords();
-        setLoadingSearch(false);
-        setUserInput('')
-        await GenerateAIResp(formattedSearchResp, data[0].id);
+            const { data, error } = await supabase
+                .from('Chats')
+                .insert([{
+                    libId,
+                    searchResult: formattedSearchResp,
+                    userSearchInput: userInput ?? searchInputRecord?.searchInput
+                }])
+                .select();
+
+            if (error) {
+                console.error('Supabase insert error:', error);
+                throw new Error('Failed to save search results');
+            }
+
+            await GetSearchRecords();
+            setUserInput('');
+            await GenerateAIResp(formattedSearchResp, data[0].id);
+
+        } catch (err) {
+            console.error('GetSearchApiResult error:', err);
+            showToast('Something went wrong with your search.');
+        } finally {
+            setLoadingSearch(false);
+        }
     };
+
     // const GetSearchApiResult = async () => {
     //     setLoadingSearch(true);
+    //     const result = await axios.post('/api/brave-search-api', {
+    //         searchInput: userInput ?? searchInputRecord?.searchInput,
+    //         searchType: searchInputRecord?.type ?? 'Search',
+    //         count: 10
+    //     });
 
-    //     try {
-    //         const result = await axios.post("/api/brave-search-api", {
-    //             searchInput: userInput ?? searchInputRecord?.searchInput,
-    //             searchType: searchInputRecord?.type ?? "Search",
-    //             count: 10,
-    //         });
+    //     const searchResp = result.data;
+    //     const formattedSearchResp = searchResp?.web?.results?.map((item) => ({
+    //         title: item?.title,
+    //         description: item?.description,
+    //         long_name: item?.profile?.long_name,
+    //         img: item?.profile?.img,
+    //         url: item?.url,
+    //         thumbnail: item?.thumbnail?.src
+    //     }));
 
-    //         const searchResp = result.data;
+    //     const { data } = await supabase
+    //         .from('Chats')
+    //         .insert([{
+    //             libId,
+    //             searchResult: formattedSearchResp,
+    //             userSearchInput: userInput ?? searchInputRecord?.searchInput
+    //         }])
+    //         .select();
 
-    //         const formattedSearchResp = searchResp?.web?.results?.map((item) => ({
-    //             title: item?.title,
-    //             description: item?.description,
-    //             long_name: item?.profile?.long_name,
-    //             img: item?.profile?.img,
-    //             url: item?.url,
-    //             thumbnail: item?.thumbnail?.src,
-    //         }));
-
-    //         // Save in Supabase
-    //         await supabase
-    //             .from("Chats")
-    //             .insert([
-    //                 {
-    //                     libId,
-    //                     searchResult: formattedSearchResp,
-    //                     userSearchInput: userInput ?? searchInputRecord?.searchInput,
-    //                 },
-    //             ])
-    //             .select();
-
-    //         await GetSearchRecords();
-    //         setUserInput("");
-    //     } catch (err) {
-    //         if (err.response?.status === 429) {
-    //             console.warn("Brave API rate limit hit");
-    //             alert("⚠️ You’ve hit the Brave API rate limit. Please wait and try again.");
-    //         } else {
-    //             console.error("Search API error:", err);
-    //             alert("Something went wrong while fetching search results.");
-    //         }
-    //     } finally {
-    //         // Always stop loader
-    //         setLoadingSearch(false);
-    //     }
+    //     await GetSearchRecords();
+    //     setLoadingSearch(false);
+    //     setUserInput('')
+    //     await GenerateAIResp(formattedSearchResp, data[0].id);
     // };
+
 
 
     const GenerateAIResp = async (formattedSearchResp, recordId) => {

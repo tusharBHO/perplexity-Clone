@@ -146,21 +146,45 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                                 a: ({ node, ...props }) => (
                                     <ResourceCard href={props.href}>{props.children}</ResourceCard>
                                 ),
-                                ul: ({ node, ...props }) => (
-                                    <ul
-                                        className="list-disc list-inside space-y-1 text-muted01 leading-relaxed"
-                                        {...props}
-                                    />
-                                ),
+
+                                // ul: ({ node, ...props }) => {
+                                //     const { ordered, ...safeProps } = props;
+                                //     return (
+                                //         <ul
+                                //             className="list-disc list-inside space-y-1 text-muted01 leading-relaxed"
+                                //             {...safeProps}
+                                //         />
+                                //     );
+                                // },
                                 // li: ({ node, ...props }) => <li className="mb-1 text-muted01 text-[16px]" {...props} />,
-                                li: ({ node, ordered, checked, ...props }) => <li className="mb-1 text-muted01 text-[16px]" {...props} />,
+                                // ol: ({ node, ...props }) => (
+                                //     <ol className="list-decimal list-inside space-y-1 text-muted01 leading-relaxed" {...props} />
+                                // ),
+                                ul: ({ node, ...props }) => {
+                                    const { ordered, ...safeProps } = props;
+                                    return (
+                                        <ul
+                                            className="list-disc list-inside space-y-1 text-muted01 leading-relaxed"
+                                            {...safeProps}
+                                        />
+                                    );
+                                },
+                                li: ({ node, ...props }) => {
+                                    const { ordered, ...safeProps } = props;
+                                    return <li className="mb-1 text-muted01 text-[16px]" {...safeProps} />;
+                                },
+                                ol: ({ node, ...props }) => {
+                                    const { ordered, ...safeProps } = props;
+                                    return (
+                                        <ol className="list-decimal list-inside space-y-1 text-muted01 leading-relaxed" {...safeProps} />
+                                    );
+                                },
                                 blockquote: ({ node, ...props }) => (
                                     <blockquote
                                         className="bg-secondary/40 p-3 rounded-lg text-muted01 leading-relaxed mb-4 border-l-4 border-accent"
                                         {...props}
                                     />
                                 ),
-
                                 strong: ({ node, ...props }) => (
                                     <strong className="font-semibold text-dark01" {...props} />
                                 ),
@@ -178,9 +202,7 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                                         {...props}
                                     />
                                 ),
-                                ol: ({ node, ...props }) => (
-                                    <ol className="list-decimal list-inside space-y-1 text-muted01 leading-relaxed" {...props} />
-                                ),
+
                                 table: ({ node, ...props }) => (
                                     <div className="overflow-x-auto my-4">
                                         <table
@@ -189,18 +211,42 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                                         />
                                     </div>
                                 ),
-                                th: ({ node, ...props }) => (
-                                    <th
-                                        className="border border-border px-3 py-2 bg-secondary font-medium text-dark text-left"
-                                        {...props}
-                                    />
-                                ),
-                                td: ({ node, ...props }) => (
-                                    <td className="border border-border px-3 py-2 text-muted01" {...props} />
-                                ),
-                                tr: ({ node, ...props }) => (
-                                    <tr className="even:bg-secondary/40 hover:bg-secondary/60 transition-colors" {...props} />
-                                ),
+                                // th: ({ node, ...props }) => (
+                                //     <th
+                                //         className="border border-border px-3 py-2 bg-secondary font-medium text-dark text-left"
+                                //         {...props}
+                                //     />
+                                // ),
+                                // td: ({ node, ...props }) => (
+                                //     <td className="border border-border px-3 py-2 text-muted01" {...props} />
+                                // ),
+                                // tr: ({ node, ...props }) => (
+                                //     <tr className="even:bg-secondary/40 hover:bg-secondary/60 transition-colors" {...props} />
+                                // ),
+                                th: ({ node, ...props }) => {
+                                    const { isHeader, ...safeProps } = props;
+                                    return (
+                                        <th
+                                            className="border border-border px-3 py-2 bg-secondary font-medium text-dark text-left"
+                                            {...safeProps}
+                                        />
+                                    );
+                                },
+                                td: ({ node, ...props }) => {
+                                    const { isHeader, ...safeProps } = props;
+                                    return (
+                                        <td className="border border-border px-3 py-2 text-muted01" {...safeProps} />
+                                    );
+                                },
+                                tr: ({ node, ...props }) => {
+                                    const { isHeader, ...safeProps } = props;
+                                    return (
+                                        <tr
+                                            className="even:bg-secondary/40 hover:bg-secondary/60 transition-colors"
+                                            {...safeProps}
+                                        />
+                                    );
+                                },
 
                                 code: ({ node, inline, className, children, ...props }) => {
                                     const match = /language-(\w+)/.exec(className || "");
