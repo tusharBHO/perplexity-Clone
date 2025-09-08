@@ -1,6 +1,4 @@
-// Plan B:
-// api/export-pdf/route.js
-export const runtime = 'nodejs';
+export const runtime = 'nodejs';  // Ensures Node.js runtime
 
 import puppeteer from 'puppeteer';
 import fs from 'fs';
@@ -8,17 +6,19 @@ import fs from 'fs';
 const logoBase64 = fs.readFileSync('public/logo.png').toString('base64');
 
 export async function POST(req) {
+    let browser;
+
     try {
         const { html } = await req.json();
 
         if (!html) {
             return new Response(JSON.stringify({ error: "Missing HTML" }), {
                 status: 400,
-                headers: { "Content-Type": "application/json" },
+                headers: { 'Content-Type': 'application/json' },
             });
         }
 
-        const browser = await puppeteer.launch({
+        browser = await puppeteer.launch({
             headless: 'new',
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
         });
@@ -28,10 +28,14 @@ export async function POST(req) {
             `<!DOCTYPE html>
                 <html>
                     <head>
-                    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-                    <style> /* Styles */ </style>
+                        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+                        <style>
+                            body { font-family: 'Inter', sans-serif; }
+                            @page { margin: 40px 30px; }
+                        </style>
                     </head>
-                    <body>${html}
+                    <body>
+                        ${html}
                         <footer>Page <span class="pageNumber"></span> of <span class="totalPages"></span></footer>
                     </body>
                 </html>`,
@@ -43,18 +47,16 @@ export async function POST(req) {
             printBackground: true,
             displayHeaderFooter: true,
             headerTemplate: `
-                <div style="...">
-                    <img src="data:image/png;base64,${logoBase64}" style="height:16px;" />
-                    <span style="font-weight:600;">Curiosity</span>
+                <div style="width:100%; text-align:center; font-size:10px; color:#374151; display:flex; align-items:center; justify-content:center; gap:6px;">
+                    <img src="data:image/png;base64,${logoBase64}" style="height:16px; object-fit:contain;" />
+                    <span style="font-weight:600; font-size:12px;">Curiosity</span>
                 </div>`,
             footerTemplate: `
-                <div style="...">
+                <div style="font-size:8px; width:100%; text-align:center; color: gray;">
                     Page <span class="pageNumber"></span> of <span class="totalPages"></span>
                 </div>`,
             margin: { top: '60px', bottom: '60px' },
         });
-
-        await browser.close();
 
         return new Response(pdfBuffer, {
             status: 200,
@@ -65,16 +67,107 @@ export async function POST(req) {
         });
     } catch (err) {
         console.error('❌ PDF export error:', err);
-        return new Response(JSON.stringify({ error: 'PDF generation failed' }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' },
-        });
+
+        return new Response(
+            JSON.stringify({ error: 'PDF generation failed' }),
+            { status: 500, headers: { 'Content-Type': 'application/json' } }
+        );
+    } finally {
+        if (browser) {
+            await browser.close();
+        }
     }
 };
 
 export async function GET() {
     return new Response('Method GET not supported', { status: 405 });
 }
+
+
+
+
+
+
+
+
+
+// // Plan B:
+// // api/export-pdf/route.js
+// export const runtime = 'nodejs';
+
+// import puppeteer from 'puppeteer';
+// import fs from 'fs';
+
+// const logoBase64 = fs.readFileSync('public/logo.png').toString('base64');
+
+// export async function POST(req) {
+//     try {
+//         const { html } = await req.json();
+
+//         if (!html) {
+//             return new Response(JSON.stringify({ error: "Missing HTML" }), {
+//                 status: 400,
+//                 headers: { "Content-Type": "application/json" },
+//             });
+//         }
+
+//         const browser = await puppeteer.launch({
+//             headless: 'new',
+//             args: ['--no-sandbox', '--disable-setuid-sandbox'],
+//         });
+
+//         const page = await browser.newPage();
+//         await page.setContent(
+//             `<!DOCTYPE html>
+//                 <html>
+//                     <head>
+//                     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+//                     <style> /* Styles */ </style>
+//                     </head>
+//                     <body>${html}
+//                         <footer>Page <span class="pageNumber"></span> of <span class="totalPages"></span></footer>
+//                     </body>
+//                 </html>`,
+//             { waitUntil: 'networkidle0' }
+//         );
+
+//         const pdfBuffer = await page.pdf({
+//             format: 'A4',
+//             printBackground: true,
+//             displayHeaderFooter: true,
+//             headerTemplate: `
+//                 <div style="...">
+//                     <img src="data:image/png;base64,${logoBase64}" style="height:16px;" />
+//                     <span style="font-weight:600;">Curiosity</span>
+//                 </div>`,
+//             footerTemplate: `
+//                 <div style="...">
+//                     Page <span class="pageNumber"></span> of <span class="totalPages"></span>
+//                 </div>`,
+//             margin: { top: '60px', bottom: '60px' },
+//         });
+
+//         await browser.close();
+
+//         return new Response(pdfBuffer, {
+//             status: 200,
+//             headers: {
+//                 'Content-Type': 'application/pdf',
+//                 'Content-Disposition': 'attachment; filename="library.pdf"',
+//             },
+//         });
+//     } catch (err) {
+//         console.error('❌ PDF export error:', err);
+//         return new Response(JSON.stringify({ error: 'PDF generation failed' }), {
+//             status: 500,
+//             headers: { 'Content-Type': 'application/json' },
+//         });
+//     }
+// };
+
+// export async function GET() {
+//     return new Response('Method GET not supported', { status: 405 });
+// }
 
 
 
