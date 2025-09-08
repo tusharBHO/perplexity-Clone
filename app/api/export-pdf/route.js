@@ -1,89 +1,44 @@
-export const runtime = 'nodejs';  // Ensures Node.js runtime
+import chromium from '@sparticuz/chromium';
+import puppeteer from 'puppeteer-core';
 
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-
-const logoBase64 = fs.readFileSync('public/logo.png').toString('base64');
+export const runtime = 'nodejs'; // Use Node.js runtime
 
 export async function POST(req) {
-    let browser;
-
     try {
         const { html } = await req.json();
-
-        if (!html) {
-            return new Response(JSON.stringify({ error: "Missing HTML" }), {
-                status: 400,
-                headers: { 'Content-Type': 'application/json' },
-            });
-        }
-
-        browser = await puppeteer.launch({
-            headless: 'new',
-            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        // Launch browser with the serverless Chromium
+        const browser = await puppeteer.launch({
+            args: chromium.args,
+            defaultViewport: chromium.defaultViewport,
+            executablePath: await chromium.executablePath(),
+            headless: chromium.headless,
+            ignoreHTTPSErrors: true,
         });
-
         const page = await browser.newPage();
-        await page.setContent(
-            `<!DOCTYPE html>
-                <html>
-                    <head>
-                        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-                        <style>
-                            body { font-family: 'Inter', sans-serif; }
-                            @page { margin: 40px 30px; }
-                        </style>
-                    </head>
-                    <body>
-                        ${html}
-                        <footer>Page <span class="pageNumber"></span> of <span class="totalPages"></span></footer>
-                    </body>
-                </html>`,
-            { waitUntil: 'networkidle0' }
-        );
+        await page.setContent(html, { waitUntil: 'networkidle0' });
 
         const pdfBuffer = await page.pdf({
             format: 'A4',
             printBackground: true,
-            displayHeaderFooter: true,
-            headerTemplate: `
-                <div style="width:100%; text-align:center; font-size:10px; color:#374151; display:flex; align-items:center; justify-content:center; gap:6px;">
-                    <img src="data:image/png;base64,${logoBase64}" style="height:16px; object-fit:contain;" />
-                    <span style="font-weight:600; font-size:12px;">Curiosity</span>
-                </div>`,
-            footerTemplate: `
-                <div style="font-size:8px; width:100%; text-align:center; color: gray;">
-                    Page <span class="pageNumber"></span> of <span class="totalPages"></span>
-                </div>`,
-            margin: { top: '60px', bottom: '60px' },
+            margin: { top: 60, bottom: 60 },
         });
+
+        await browser.close();
 
         return new Response(pdfBuffer, {
             status: 200,
             headers: {
                 'Content-Type': 'application/pdf',
-                'Content-Disposition': 'attachment; filename="library.pdf"',
+                'Content-Disposition': 'attachment; filename="file.pdf"',
             },
         });
     } catch (err) {
-        console.error('❌ PDF export error:', err);
-
-        return new Response(
-            JSON.stringify({ error: 'PDF generation failed' }),
-            { status: 500, headers: { 'Content-Type': 'application/json' } }
-        );
-    } finally {
-        if (browser) {
-            await browser.close();
-        }
+        return new Response(JSON.stringify({ error: err.message }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' },
+        });
     }
-};
-
-export async function GET() {
-    return new Response('Method GET not supported', { status: 405 });
 }
-
-
 
 
 
@@ -179,7 +134,7 @@ export async function GET() {
 
 
 
-
+// // Working on localhost well
 // // Plan B:
 // // api/export-pdf/route.js
 // import puppeteer from "puppeteer";

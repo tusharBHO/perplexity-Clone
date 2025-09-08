@@ -21,7 +21,15 @@ function AnswerDisplay({ chat, loadingSearch, onDeleteChat, isDeletable }) {
       }),
     });
 
+    if (!response.ok) {
+      // Optionally display message/notification to user
+      const errorMsg = await response.text();
+      console.error("PDF generation failed:", errorMsg);
+      return;
+    }
+
     const blob = await response.blob();
+    const pdfBlob = new Blob([blob], { type: "application/pdf" }); // optional redundancy
     const url = URL.createObjectURL(blob);
 
     const a = document.createElement("a");
@@ -79,7 +87,7 @@ function AnswerDisplay({ chat, loadingSearch, onDeleteChat, isDeletable }) {
               // size="sm"
               // className="flex items-center gap-2 rounded-lg text-xs"
               className="bg-sHover-hover inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-sm bg-secondary text-muted01 hover:text-dark transition-colors relative bottom-10"
-            > 
+            >
               <Download className="w-4 h-4 md:w-3 md:h-3" />
               Export
             </button>

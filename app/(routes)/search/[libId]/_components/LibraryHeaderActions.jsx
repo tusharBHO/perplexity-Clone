@@ -1,3 +1,4 @@
+// app/api/(routes)/search/[libId]/_components/LibraryHeaderActions.jsx
 "use client";
 import { useState, useEffect } from "react";
 import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
@@ -81,12 +82,19 @@ export default function LibraryHeaderActions({ library, onTitleChange }) {
             }),
         });
 
+        // if (!response.ok) {
+        //     console.error("Failed to generate PDF");
+        //     return;
+        // }
         if (!response.ok) {
-            console.error("Failed to generate PDF");
+            // Optionally display message/notification to user
+            const errorMsg = await response.text();
+            console.error("PDF generation failed:", errorMsg);
             return;
         }
 
         const blob = await response.blob();
+        const pdfBlob = new Blob([blob], { type: "application/pdf" }); // optional redundancy
         const url = URL.createObjectURL(blob);
 
         const a = document.createElement("a");
