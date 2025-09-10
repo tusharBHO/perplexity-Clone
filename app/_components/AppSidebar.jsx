@@ -215,7 +215,8 @@ export default function AppSidebar() {
 
             {/* Mobile Sidebar Drawer */}
             {isMobileOpen && (
-                <div className="md:hidden fixed top-0 left-0 flex flex-col h-screen max-h-[100vh] w-78 bg-secondary z-50 px-1 animate-[slideIn_0.3s_ease-out] border-r border-theme">
+                // <div className="md:hidden fixed top-0 left-0 flex flex-col h-screen max-h-[100vh] w-78 bg-secondary z-50 px-1 animate-[slideIn_0.3s_ease-out] border-r border-theme">
+                <div className="md:hidden fixed top-0 left-0 flex flex-col h-screen max-h-[100dvh] w-78 bg-secondary z-50 px-1 animate-[slideIn_0.3s_ease-out] border-r border-theme">
                     <div>
                         <button onClick={() => setIsMobileOpen(false)} className="flex items-center gap-2 text-dark">
                             {/* <X className="h-5 w-5 text-dark" /> */}
@@ -261,7 +262,7 @@ export default function AppSidebar() {
                                     {/* Library Items */}
                                     {menu.title === "Library" && (
                                         // <div className="w-full pr-1 h-[calc(100vh-390px)] overflow-y-scroll overflow-x-hidden">
-                                        <div className="w-full pr-1 mb-3 h-[calc(100vh-400px)] overflow-y-scroll overflow-x-hidden">
+                                        <div className="w-full pr-1 mb-3 h-[calc(100dvh-400px)] overflow-y-scroll overflow-x-hidden">
                                             {searchInputsArray.map((item, i) => (
                                                 <div
                                                     key={i}

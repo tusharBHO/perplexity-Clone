@@ -21,6 +21,9 @@ module.exports = {
         pHover: "#f4f4f4",
         sHover: "#e8e5e5",
       },
+      height: {
+        screen: '100dvh', // replaces '100vh' with '100dvh' for better mobile behavior
+      },
     },
   },
   // plugins: [],
