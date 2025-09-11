@@ -193,7 +193,7 @@ function DisplayResult({ searchInputRecord }) {
     };
 
     return (
-        <div className="relative pb-10 flex flex-col items-center">
+        <div className="relative h-[100dvh] pb-10 flex flex-col items-center">
             {/* top-right buttons */}
             <div className="fixed text-center z-30 flex items-center justify-center gap-2 right-2 top-2 md:right-5">
                 {/* <LibraryHeaderActions library={library} /> */}

@@ -19,7 +19,7 @@ export default function Preferences() {
     const { aiModel, setAiModel } = useAiModel();
 
     return (
-        <div className="w-full h-[calc(100vh-52px)] px-4 sm:px-6 md:px-8 ">
+        <div className="w-full h-[calc(100dvh-52px)] px-4 sm:px-6 md:px-8 ">
             {/* Appearance Section */}
             <section className="mb-10">
                 <h1 className="text-xl md:text-lg font-semibold text-dark">Preferences</h1>

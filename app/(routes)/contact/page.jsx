@@ -4,7 +4,7 @@ import ContactPage from "./ContactPage"; // the form component
 
 export default function ContactLayout() {
     return (
-        <div className="flex min-h-screen bg-primary m-auto">
+        <div className="flex h-[100dvh] bg-primary m-auto">
             {/* <ProfileSidebar /> */}
             <ContactPage />
         </div>

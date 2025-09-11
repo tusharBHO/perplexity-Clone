@@ -83,7 +83,7 @@ export default function AccountInfo() {
     };
 
     return (
-        <div className="w-full h-[calc(100vh-52px)] px-4 sm:px-6 md:px-10 overflow-y-scroll">
+        <div className="w-full h-[calc(100dvh-52px)] px-4 sm:px-6 md:px-10 overflow-y-scroll">
             {/* Account Section */}
             <section className="mb-10">
                 <h1 className="text-xl md:text-lg font-semibold text-dark">Account</h1>

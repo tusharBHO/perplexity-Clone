@@ -42,13 +42,14 @@ function Library() {
     }
 
     return (
-        <div className="px-6 md:px-16 lg:px-32 xl:px-48 pt-16 pb-6 md:ml-14 h-screen w-full md:w-[calc(100%-3.5rem)] bg-primary">
+        // <div className="px-6 md:px-16 lg:px-32 xl:px-48 pt-16 pb-6 md:ml-14 h-screen w-full md:w-[calc(100%-3.5rem)] bg-primary">
+        <div className="px-6 md:px-16 lg:px-32 xl:px-48 pt-16 pb-6 md:ml-14 h-[100dvh] w-full md:w-[calc(100%-3.5rem)] bg-primary">
             <h2 className="font-bold text-3xl text-dark">📚 Library</h2>
             <p className="text-muted mt-2 text-sm">
                 Your saved searches & history
             </p>
 
-            <div className="mt-5 h-[77vh] overflow-y-scroll">
+            <div className="mt-5 h-[77dvh] overflow-y-scroll">
                 {isLoading ? (
                     <LibrarySkeleton items={6} />  // ✅ Show skeleton while loading
                 ) : libraryHistory.length > 0 ? (

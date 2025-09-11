@@ -75,7 +75,7 @@ function Discover() {
     if (width < 768) {
         return (
             // <div className="md:ml-14 h-full w-full md:w-[calc(100%-3.5rem)] px-3 md:px-12 lg:px-20 pt-10 pb-5 bg-primary text-dark">
-            <div className="md:ml-14 h-screen w-full md:w-[calc(100%-3.5rem)] px-3 md:px-12 lg:px-20 pt-10 pb-5 bg-primary text-dark">
+            <div className="md:ml-14 h-[100dvh] w-full md:w-[calc(100%-3.5rem)] px-3 md:px-12 lg:px-20 pt-10 pb-5 bg-primary text-dark">
                 <h2 className="font-bold text-3xl flex gap-2 items-center">
                     <Globe className="text-accent h-7 w-7 pt-1" />
                     <span>Discover</span>
@@ -103,7 +103,7 @@ function Discover() {
 
                 {/* Mobile scroll snap container */}
                 {/* <div className="overflow-y-scroll snap-y snap-mandatory h-[calc(100vh-214px)] mt-6 border-1 border-blue-400"> */}
-                <div className="overflow-y-scroll snap-y snap-mandatory h-[calc(100vh-214px)] mt-6">
+                <div className="overflow-y-scroll snap-y snap-mandatory h-[calc(100dvh-214px)] mt-6">
                     {latestNews.map((news, idx) => (
                         // <div key={idx} className="snap-start h-[605px] mb-4 border-2 border-red-600">
                         <div key={idx} className="snap-start h-[605px] mb-0 flex flex-col items-center">
@@ -143,7 +143,7 @@ function Discover() {
                 })}
             </div>
 
-            <div className="sm:mt-6 space-y-10 h-[calc(100vh-220px)] sm:h-auto pt-6 sm:pt-0">
+            <div className="sm:mt-6 space-y-10 h-[calc(100dvh-220px)] sm:h-auto pt-6 sm:pt-0">
                 {groups.map((group, groupIndex) => (
                     <div key={groupIndex} className="space-y-10">
                         <FeaturedNewsCard news={group[0]} />

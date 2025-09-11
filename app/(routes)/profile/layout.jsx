@@ -7,7 +7,7 @@ export default function ProfileLayout({ children }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="h-screen w-screen flex bg-primary">
+        <div className="h-[100dvh] w-screen flex bg-primary">
             {/* Sidebar - desktop */}
             <div className="hidden md:block">
                 <Sidebar /> {/* no onClose needed here */}
