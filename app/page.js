@@ -4,7 +4,7 @@ import ChatInputBox from "./_components/ChatInputBox";
 export default function Home() {
   return (
     // <div className="w-full h-screen">
-    <div className="h-[100vh] w-[100vw]">
+    <div className="h-[100dvh] w-[100vw]">
       <ChatInputBox />
     </div>
   );
