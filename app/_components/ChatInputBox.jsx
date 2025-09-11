@@ -1,6 +1,6 @@
 function ChatInputBox(params) {
     return (
-        <div className="h-[100vh] w-[100vw] bg-red-400 dark:bg-pink-400"></div>
+        <div className="h-[100vh] w-[100vw] bg-yellow-400-400 dark:bg-green-400-400"></div>
     )
 }
 export default ChatInputBox
