@@ -58,7 +58,7 @@ function ChatInputBox() {
 
     return (
         // <div className="md:ml-14 h-[100%] md:h-screen w-full md:w-[calc(100%-3.5rem)] flex flex-col items-center justify-start pt-[25vh] bg-primary">
-        <div className="md:ml-14 h-screen w-full md:w-[calc(100%-3.5rem)] flex flex-col items-center justify-start bg-primary">
+        <div className="md:ml-14 h-[100dvh] w-full md:w-[calc(100%-3.5rem)] flex flex-col items-center justify-start bg-primary">
 
             <div className='fixed top-[30%] sm:top-[30%]'>
                 {/* Logo + Title */}
