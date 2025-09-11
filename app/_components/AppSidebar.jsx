@@ -8,7 +8,8 @@ import {
     DollarSign, Palette, Star, Volleyball,
     Menu, X,
     ArrowUpLeftFromSquareIcon,
-    ArrowLeft
+    ArrowLeft,
+    UserPlus
 } from "lucide-react";
 
 import { usePathname, useRouter } from "next/navigation";
@@ -18,6 +19,7 @@ import { useSearchCategory } from "../../context/searchCategoryContext";
 import { supabase } from "../../services/supabase";
 import CustomUserMenu from "./CustomUserMenu";
 import ThemeToggle from "./ThemeToggle";
+import Link from "next/link";
 
 const MenuOptions = [
     {
@@ -291,7 +293,13 @@ export default function AppSidebar() {
                         })}
                         <div className="h-[40px] w-full px-0 flex items-center justify-start gap-2">
                             <CustomUserMenu />
-                            <p className="font-medium text-dark text-lg">{user?.fullName}</p>
+                            {/* <p className="font-medium text-dark text-lg">{user?.fullName}</p> */}
+                            {user && <p className="font-medium text-dark text-lg">{user?.fullName}</p>}
+                            {!user && <Link href="/sign-up">
+                                <button className="h-7 w-full justify-start gap-2 text-dark text-sm hover:bg-secondary flex items-center">
+                                    <UserPlus className="h-5 w-5 md:w-4 md:h-4 text-accent" /> Sign Up
+                                </button>
+                            </Link>}
                         </div>
                     </nav>
                 </div>
