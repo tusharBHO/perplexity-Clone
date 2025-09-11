@@ -101,7 +101,6 @@ function ChatInputBox() {
                                         onSearchQuery();
                                     }
                                 }
-                                // Else allow Shift+Enter to insert a newline naturally
                             }}
                         />
                     </TabsContent>
@@ -127,7 +126,6 @@ function ChatInputBox() {
                                         onSearchQuery();
                                     }
                                 }
-                                // Else allow Shift+Enter to insert a newline naturally
                             }}
                         />
                     </TabsContent>

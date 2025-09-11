@@ -147,19 +147,6 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                                     <ResourceCard href={props.href}>{props.children}</ResourceCard>
                                 ),
 
-                                // ul: ({ node, ...props }) => {
-                                //     const { ordered, ...safeProps } = props;
-                                //     return (
-                                //         <ul
-                                //             className="list-disc list-inside space-y-1 text-muted01 leading-relaxed"
-                                //             {...safeProps}
-                                //         />
-                                //     );
-                                // },
-                                // li: ({ node, ...props }) => <li className="mb-1 text-muted01 text-[16px]" {...props} />,
-                                // ol: ({ node, ...props }) => (
-                                //     <ol className="list-decimal list-inside space-y-1 text-muted01 leading-relaxed" {...props} />
-                                // ),
                                 ul: ({ node, ...props }) => {
                                     const { ordered, ...safeProps } = props;
                                     return (
@@ -211,18 +198,7 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                                         />
                                     </div>
                                 ),
-                                // th: ({ node, ...props }) => (
-                                //     <th
-                                //         className="border border-border px-3 py-2 bg-secondary font-medium text-dark text-left"
-                                //         {...props}
-                                //     />
-                                // ),
-                                // td: ({ node, ...props }) => (
-                                //     <td className="border border-border px-3 py-2 text-muted01" {...props} />
-                                // ),
-                                // tr: ({ node, ...props }) => (
-                                //     <tr className="even:bg-secondary/40 hover:bg-secondary/60 transition-colors" {...props} />
-                                // ),
+
                                 th: ({ node, ...props }) => {
                                     const { isHeader, ...safeProps } = props;
                                     return (
@@ -351,14 +327,6 @@ export default function DisplaySummary({ aiResp, libId, chatId, onDelete, isDele
                     </button>
 
                     {/* Delete */}
-                    {/* {isDeletable && (
-                        <button
-                            onClick={handleDelete}
-                            className="flex items-center gap-1 px-2 py-1 rounded-md text-xs bg-secondary text-muted01 hover:text-dark transition-colors"
-                        >
-                            <Trash2 className="w-3 h-3" />
-                        </button>
-                    )} */}
                     {isDeletable && (
                         <button
                             onClick={handleDelete}

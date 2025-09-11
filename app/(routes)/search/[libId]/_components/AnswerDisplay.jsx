@@ -84,7 +84,6 @@ function AnswerDisplay({ chat, loadingSearch, onDeleteChat, isDeletable }) {
           <PopoverTrigger asChild>
             <button
               variant="outline"
-              // size="sm"
               // className="flex items-center gap-2 rounded-lg text-xs"
               className="bg-sHover-hover inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-sm bg-secondary text-muted01 hover:text-dark transition-colors relative bottom-10"
             >
@@ -121,97 +120,3 @@ function AnswerDisplay({ chat, loadingSearch, onDeleteChat, isDeletable }) {
 }
 
 export default AnswerDisplay;
-
-
-
-
-
-
-
-
-
-
-
-// // app/(routes)/search/[libId]/_components/AnswerDisplay.jsx
-// import React from 'react'
-// import Image from 'next/image';
-// import SourceList from './SourceList'
-// import DisplaySummary from './DisplaySummary'
-
-// import ChatExportHTML from "./ChatExportHTML";
-// import { FileText, FileDown } from "lucide-react";
-
-// function AnswerDisplay({ chat, loadingSearch, onDeleteChat, isDeletable }) {
-//   console.log('chat', chat)
-
-//   // PDF export
-//   const handleExportPDF = async () => {
-//     const html = document.getElementById(`export-chat-${chat.id}`).innerHTML;
-
-//     const response = await fetch("/api/export-pdf", {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({
-//         html,
-//         title: chat.userSearchInput?.slice(0, 30) || "Chat",
-//       }),
-//     });
-
-//     const blob = await response.blob();
-//     const url = URL.createObjectURL(blob);
-
-//     const a = document.createElement("a");
-//     a.href = url;
-//     a.download = `${(chat.userSearchInput || "chat").replace(/[^\w\s-]/g, "")}.pdf`;
-//     a.click();
-//     URL.revokeObjectURL(url);
-//   };
-
-//   // Markdown export
-//   const handleExportMarkdown = () => {
-//     let md = `# Prompt\n\n${chat.userSearchInput || ""}\n\n`;
-//     md += `## Response\n\n${chat.aiResp || "_No response_"}\n\n`;
-
-//     if (chat.searchResult?.length > 0) {
-//       md += `## Sources\n\n`;
-//       chat.searchResult.forEach((src) => {
-//         md += `- [${src.title || src.link}](${src.link})\n`;
-//       });
-//     }
-
-//     const blob = new Blob([md], { type: "text/markdown" });
-//     const url = URL.createObjectURL(blob);
-
-//     const a = document.createElement("a");
-//     a.href = url;
-//     a.download = `${(chat.userSearchInput || "chat").replace(/[^\w\s-]/g, "")}.md`;
-//     a.click();
-//     URL.revokeObjectURL(url);
-//   };
-
-//   return (
-//     <div>
-//       <SourceList webResult={chat?.searchResult} loadingSearch={loadingSearch} />
-//       <DisplaySummary aiResp={chat?.aiResp} libId={chat?.libId} chatId={chat?.id} onDelete={onDeleteChat} isDeletable={isDeletable} />
-
-
-//       {/* Hidden export area */}
-//       <div id={`export-chat-${chat.id}`} className="hidden">
-//         <ChatExportHTML chat={chat} />
-//       </div>
-
-//       {/* Export buttons */}
-//       <div className="flex gap-2 mt-2">
-//         <button onClick={handleExportPDF} className="px-2 py-1 bg-secondary rounded">
-//           <FileText className="w-4 h-4" /> Export PDF
-//         </button>
-//         <button onClick={handleExportMarkdown} className="px-2 py-1 bg-secondary rounded">
-//           <FileDown className="w-4 h-4" /> Export Markdown
-//         </button>
-//       </div>
-
-//     </div>
-//   )
-// }
-
-// export default AnswerDisplay

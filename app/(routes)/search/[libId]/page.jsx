@@ -25,8 +25,8 @@ function SearchQueryResult() {
   }
 
   return (
-    <div className="md:ml-14 bg-primary h-[100dvh]">
-      <div className="px-5 sm:px-10 md:px-20 lg:px-36 xl:px-56 md:pt-10">
+    <div className="md:ml-14 bg-primary h-full overflow-y-scroll">
+      <div className="px-5 h-full sm:px-10 md:px-20 lg:px-36 xl:px-56 md:pt-10">
         {searchInputRecord ? (
           <DisplayResult searchInputRecord={searchInputRecord} />
         ) : (

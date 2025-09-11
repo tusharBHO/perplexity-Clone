@@ -39,6 +39,7 @@ function Provider({ children }) {
     return (
         <UserDetailContext.Provider value={{ userDetail, setUserDetail }}>
             <div className='w-full h-[100dvh]'>
+            {/* <div className='w-full h-full'> */}
                 {children}
             </div>
         </UserDetailContext.Provider>

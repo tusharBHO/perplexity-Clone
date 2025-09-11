@@ -82,10 +82,6 @@ export default function LibraryHeaderActions({ library, onTitleChange }) {
             }),
         });
 
-        // if (!response.ok) {
-        //     console.error("Failed to generate PDF");
-        //     return;
-        // }
         if (!response.ok) {
             // Optionally display message/notification to user
             const errorMsg = await response.text();

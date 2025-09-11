@@ -28,14 +28,6 @@ function ImageListTab({ chat, loading }) {
             onClick={() => window.open(item.url, "_blank")}
             className="relative mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer"
           >
-            {/* <Image
-              src={item?.thumbnail || fallback}
-              alt={item?.title || "Image"}
-              width={400}
-              height={0} // lets height auto-adjust
-              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-            /> */}
-
             {item?.thumbnail ? (
               <div className="w-full overflow-hidden rounded-lg group">
                 <img
