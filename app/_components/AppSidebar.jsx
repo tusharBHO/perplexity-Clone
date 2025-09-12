@@ -18,7 +18,7 @@ import { useSearchType } from "../../context/SearchTypeContext";
 import { useSearchCategory } from "../../context/searchCategoryContext";
 import { supabase } from "../../services/supabase";
 import CustomUserMenu from "./CustomUserMenu";
-import ThemeToggle from "./ThemeToggle";
+// import ThemeToggle from "./ThemeToggle";
 import Link from "next/link";
 
 const MenuOptions = [
@@ -169,7 +169,7 @@ export default function AppSidebar() {
                     />
                 </div>
 
-                <ThemeToggle />
+                {/* <ThemeToggle /> */}
 
                 {/* Menu */}
                 <nav className="flex flex-col gap-2 flex-grow">

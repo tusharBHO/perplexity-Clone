@@ -12,6 +12,8 @@ import { AiModelProvider } from "../context/aiModelContext";
 import { usePathname } from "next/navigation";
 import { ThemeProvider } from "../context/ThemeContext"; // 👈 import it
 import { ToastProvider } from "../context/ToastContext";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,20 +36,22 @@ export default function RootLayout({ children }) {
         >
           <ThemeProvider>   {/* 👈 wrap here */}
             {/* <RootWrapper> Wrap here */}
-              <ToastProvider> {/* Toast context inside ThemeProvider */}
-                <SidebarProvider>
-                  <SearchTypeProvider>
-                    <SearchCategoryProvider>
-                      <AiModelProvider>
-                        {!hideSidebar && <AppSidebar />}
-                        <Provider>
-                          {children}
-                        </Provider>
-                      </AiModelProvider>
-                    </SearchCategoryProvider>
-                  </SearchTypeProvider>
-                </SidebarProvider>
-              </ToastProvider>
+            <ToastProvider> {/* Toast context inside ThemeProvider */}
+              <SidebarProvider>
+                <SearchTypeProvider>
+                  <SearchCategoryProvider>
+                    <AiModelProvider>
+                      {!hideSidebar && <AppSidebar />}
+                      <Provider>
+                        {children}
+                      </Provider>
+                    </AiModelProvider>
+                  </SearchCategoryProvider>
+                </SearchTypeProvider>
+              </SidebarProvider>
+            </ToastProvider>
+            <Analytics />
+            <SpeedInsights />
             {/* </RootWrapper> */}
           </ThemeProvider>
         </body>
