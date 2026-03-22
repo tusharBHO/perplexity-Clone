@@ -62,8 +62,10 @@ Built with a focus on **scalability, performance, and clean user experience**, t
 ## 📸 Screenshots
 
 <!-- Add your screenshots here -->
-![Home](./screenshots/home.png)
-![Response](./screenshots/response.png)
+![Home](./screenshots/HomePage.png)
+![Response](./screenshots/SerchBaar.png)
+![Response](./screenshots/Images.png)
+![Response](./screenshots/Discover.png)
 
 ---
 
